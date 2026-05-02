@@ -1,0 +1,17 @@
+.pcHeader{
+    display:flex;
+    align-items: center;
+    border-bottom: 1px solid;
+    height: 80px;
+}
+.navContainer{
+    width: 70%; 
+    margin:0 auto;
+
+ul{
+    display: flex;
+    font-size: 22px;
+    justify-content: space-evenly;   
+}
+
+}
