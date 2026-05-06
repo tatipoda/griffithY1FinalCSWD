@@ -59,3 +59,18 @@
     gap: 30px;
   }
 }
+
+.footer h2,
+.footer h3,
+.footer p,
+.footer a {
+  color: inherit;
+}
+
+.footer {
+  color: white;
+}
+
+.footer a:hover {
+  color: var(--yellow);
+}

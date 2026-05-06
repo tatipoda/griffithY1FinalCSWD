@@ -57,6 +57,22 @@
     --fw-bold: 700;
 }
 
+/*colors for light scheme*/
+[data-theme="light"] {
+  --bg-header: #ffffff;
+  --bg: #f7f7f7;
+  --bg-main: #ffffff;
+  --bg-card: #ffffff;
+  --bg-soft: #eeeeee;
+
+  --text: #111111;
+  --text-muted: #444444;
+  --text-dim: #666666;
+
+  --border: #dddddd;
+  --border-strong: #cccccc;
+}
+
 html {
     height: 100%;
 }
