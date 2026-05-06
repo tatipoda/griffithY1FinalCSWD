@@ -3,15 +3,14 @@ import styles from "./HomePage.module.css";
 function HomePage() {
   return (
     <main>
-      <section className={styles.hero}>
-        <div>
-          <h1>Titan Lab</h1>
-          <p>Build strength. Improve confidence. Train with purpose.</p>
-          <button>Join Now</button>
-        </div>
+<section className={styles.hero}>
+  <div className={styles.heroContent}>
+    <h1>Titan Lab</h1>
+    <p>Train harder. Get stronger. Build discipline.</p>
+    <button>Join Now</button>
+  </div>
+</section>
 
-        <div className={styles.heroImage}>IMAGE</div>
-      </section>
 
       <section className={styles.section}>
         <h2>Popular Classes</h2>
@@ -20,28 +19,28 @@ function HomePage() {
           <article className={styles.card}>
             <div className={styles.cardImage}>IMAGE</div>
             <h3>Yoga</h3>
-            <p>TEXT</p>
+            <p>Improve flexibility and reduce stress</p>
             <button>Learn More</button>
           </article>
 
           <article className={styles.card}>
             <div className={styles.cardImage}>IMAGE</div>
             <h3>Strength</h3>
-            <p>TEXT</p>
+           <p>Build muscle and increase power</p>
             <button>Learn More</button>
           </article>
 
           <article className={styles.card}>
             <div className={styles.cardImage}>IMAGE</div>
             <h3>Cardio</h3>
-            <p>TEXT</p>
+           <p>Boost endurance and burn calories</p>
             <button>Learn More</button>
           </article>
 
           <article className={styles.card}>
             <div className={styles.cardImage}>IMAGE</div>
             <h3>Crossfit</h3>
-            <p>TEXT</p>
+            <p>High intensity functional training</p>
             <button>Learn More</button>
           </article>
         </div>

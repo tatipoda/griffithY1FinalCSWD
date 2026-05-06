@@ -7,6 +7,7 @@
 .page {
   padding: 80px 6%;
   min-height: 60vh;
+  background: linear-gradient(180deg, #ffffff, #f3f3f3);
 }
 
 .page h1 {
@@ -21,4 +22,59 @@
   line-height: 1.6;
 }
 
+.pricing-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
 
+.pricing-card {
+  background: white;
+border-radius: 14px;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #cccccc;
+  padding: 30px;
+  transition: transform 0.2s;
+}
+
+.pricing-card:hover {
+  transform: translateY(-6px);
+}
+.pricing-card h2 {
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.pricing-card li {
+  margin-bottom: 10px;
+}
+
+.pricing-card button {
+  margin-top: 20px;
+  padding: 12px 22px;
+  background: #111111;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+.featured {
+  border: 2px solid #e63946;
+  transform: scale(1.03);
+  background: #fff5f5;
+}
+.pricing-card button:hover {
+  background: #e63946;
+}
+
+@media (max-width: 800px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+}

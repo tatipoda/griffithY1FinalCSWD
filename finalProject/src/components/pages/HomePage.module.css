@@ -1,26 +1,30 @@
 .hero {
-  padding: 70px 6%;
-  display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  gap: 60px;
+  min-height: 650px;
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("/gym-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
   align-items: center;
-  border-bottom: 1px solid #ddd;
+  padding: 0 6%;
 }
 
-.hero h1 {
-  font-size: 64px;
-  margin-bottom: 18px;
-  color: #111111;
+.heroContent {
+  max-width: 600px;
+  color: white;
 }
 
-.hero p {
-  font-size: 22px;
-  line-height: 1.5;
-  margin-bottom: 28px;
-  color: #444444;
+.heroContent h1 {
+  font-size: 82px;
+  margin-bottom: 20px;
 }
 
-.hero button,
+.heroContent p {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.heroContent button,
 .card button,
 .cta button {
   padding: 12px 24px;
@@ -31,13 +35,12 @@
   font-weight: 700;
 }
 
-.hero button:hover,
+.heroContent button:hover,
 .card button:hover,
 .cta button:hover {
   background-color: #e63946;
 }
 
-.heroImage,
 .cardImage,
 .trainerImage {
   display: flex;
@@ -47,10 +50,6 @@
   border: 1px solid #bbbbbb;
   color: #777777;
   font-weight: 700;
-}
-
-.heroImage {
-  min-height: 360px;
 }
 
 .section {
@@ -73,10 +72,15 @@
 .card {
   border: 1px solid #cccccc;
   background-color: white;
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: translateY(-6px);
 }
 
 .cardImage {
   height: 150px;
+  background-color: #830d0d;
 }
 
 .card h3,
@@ -129,11 +133,7 @@
 
 @media (max-width: 900px) {
   .hero {
-    grid-template-columns: 1fr;
-  }
-
-  .hero h1 {
-    font-size: 44px;
+    min-height: 520px;
   }
 
   .cards {
