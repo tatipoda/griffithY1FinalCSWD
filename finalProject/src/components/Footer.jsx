@@ -1,46 +1,36 @@
-import styles from'./Footer.module.css';
+import { Link } from "react-router-dom";
+import styles from "./Footer.module.css";
 
-function Footer(){
-    return(
+function Footer() {
+  return (
     <footer className={styles.footer}>
-        <div className={styles.footerContext}>
-        <h2 className="logo">Gym name</h2>
-        <div className={styles.columnsContainer}>
+      <div>
+        <h2>Titan Lab</h2>
+        <p>Modern fitness club for strength, health and discipline.</p>
+      </div>
 
-        <div className={styles.footerColumn}>
-        <h3 className={styles.sectionName}>Find out more</h3>
-        <ul>
-            <li>Programs</li>
-            <li>Classes</li>
-            <li>Memberships</li>
-        </ul>
-        </div>
+      <div>
+        <h3>Quick Links</h3>
+        <Link to="/">Home</Link>
+        <Link to="/about">About Us</Link>
+        <Link to="/classes">Classes</Link>
+        <Link to="/trainers">Trainers</Link>
+      </div>
 
-        <div className={styles.footerColumn}>
-        <h3 className={styles.sectionName}>Company</h3>
-        <ul>
-            <li>About us</li>
-            <li>Coaches</li>
-            <li>Careers</li>
-        </ul>
-        </div>
+      <div>
+        <h3>Membership</h3>
+        <Link to="/membership">Pricing</Link>
+        <Link to="/membership">Plans</Link>
+        <Link to="/contact">Contact</Link>
+      </div>
 
-        <div className={styles.footerColumn}>
-        <h3 className={styles.sectionName}>Support</h3>
-        <ul>
-            <li>FAQ</li>
-            <li>Contact</li>
-            <li>Privacy Policy</li>
-        </ul>
-        </div>
-
-        </div>
-        </div>
-        <div className={styles.copyright}>
-        <p>© 2026 Gym name </p>
-        </div>
+      <div>
+        <h3>Project</h3>
+        <Link to="/gallery">Gallery</Link>
+        <Link to="/developers">Developers</Link>
+      </div>
     </footer>
-    );
-
+  );
 }
+
 export default Footer;

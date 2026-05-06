@@ -1,0 +1,146 @@
+.hero {
+  padding: 70px 6%;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 60px;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.hero h1 {
+  font-size: 64px;
+  margin-bottom: 18px;
+  color: #111111;
+}
+
+.hero p {
+  font-size: 22px;
+  line-height: 1.5;
+  margin-bottom: 28px;
+  color: #444444;
+}
+
+.hero button,
+.card button,
+.cta button {
+  padding: 12px 24px;
+  background-color: #111111;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.hero button:hover,
+.card button:hover,
+.cta button:hover {
+  background-color: #e63946;
+}
+
+.heroImage,
+.cardImage,
+.trainerImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eeeeee;
+  border: 1px solid #bbbbbb;
+  color: #777777;
+  font-weight: 700;
+}
+
+.heroImage {
+  min-height: 360px;
+}
+
+.section {
+  padding: 60px 6%;
+  border-bottom: 1px solid #ddd;
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 36px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.card {
+  border: 1px solid #cccccc;
+  background-color: white;
+}
+
+.cardImage {
+  height: 150px;
+}
+
+.card h3,
+.card p,
+.card button {
+  margin-left: 18px;
+  margin-right: 18px;
+}
+
+.card h3 {
+  margin-top: 18px;
+}
+
+.card p {
+  color: #555555;
+}
+
+.card button {
+  margin-bottom: 18px;
+}
+
+.trainers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 38px;
+}
+
+.trainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.trainerImage {
+  width: 110px;
+  height: 110px;
+  flex-shrink: 0;
+}
+
+.cta {
+  padding: 50px 6%;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.cta h2 {
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .trainers {
+    grid-template-columns: 1fr;
+  }
+}
