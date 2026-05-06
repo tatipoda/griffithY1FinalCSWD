@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
 }
-
 .page {
   padding: 80px 6%;
   flex: 1;
@@ -21,101 +20,4 @@
   color: var(--text-muted);
   max-width: 700px;
   line-height: 1.6;
-}
-
-.pricing-grid {
-  margin-top: 40px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-}
-
-.pricing-card {
-  background: var(--bg-card);
-  border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  border: 1px solid var(--border-strong);
-  padding: 40px;
-  transition: transform 0.2s;
-}
-
-.pricing-card:hover {
-  transform: translateY(-6px);
-}
-.pricing-card h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
-.pricing-card h2,
-.pricing-card li {
-  color: var(--text);
-}
-
-.page .price {
-  font-size: 30px;
-  font-weight: bold;
-  margin-bottom: 24px;
-  color: var(--yellow);
-}
-
-.pricing-card li {
-  margin-bottom: 12px;
-  font-size: 20px;
-}
-
-.featured {
-  border: 2px solid var(--red);
-  transform: scale(1.03);
-  background: #221416;
-}
-
-.featured h2,
-.featured li {
-  color: #f5f5f5;
-}
-
-.pricing-card button:hover {
-  background: #e63946;
-}
-
-.membership-intro {
-  text-align: center;
-  max-width: 850px;
-  margin: 0 auto 50px;
-}
-
-.membership-slogan {
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--text);
-  margin-bottom: 16px;
-}
-
-.membership-note {
-  font-size: 17px;
-  color: var(--text-muted);
-  line-height: 1.6;
-}
-
-.plan-button {
-  display: inline-block;
-  margin-top: 24px;
-  padding: 14px 26px;
-  background: var(--yellow);
-  color: var(--black);
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 20px;
-}
-
-.plan-button:hover {
-  background: var(--yellow-deep);
-  color: var(--black);
-}
-
-@media (max-width: 800px) {
-  .pricing-grid {
-    grid-template-columns: 1fr;
-  }
 }
