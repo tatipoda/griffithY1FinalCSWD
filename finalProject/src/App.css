@@ -7,17 +7,18 @@
 .page {
   padding: 80px 6%;
   min-height: 60vh;
-  background: linear-gradient(180deg, #ffffff, #f3f3f3);
+  background-color: var(--bg);
+  color: var(--text);
 }
 
 .page h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
+  font-size: 56px;
+  margin-bottom: 24px;
 }
 
 .page p {
   font-size: 20px;
-  color: #444444;
+  color: var(--text-muted);
   max-width: 700px;
   line-height: 1.6;
 }
@@ -30,11 +31,11 @@
 }
 
 .pricing-card {
-  background: white;
-border-radius: 14px;
-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  border: 1px solid #cccccc;
-  padding: 30px;
+  background: var(--bg-card);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--border-strong);
+  padding: 40px;
   transition: transform 0.2s;
 }
 
@@ -42,32 +43,42 @@ box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   transform: translateY(-6px);
 }
 .pricing-card h2 {
-  margin-bottom: 15px;
-}
-
-.price {
   font-size: 28px;
-  font-weight: bold;
   margin-bottom: 20px;
 }
 
+.pricing-card h2,
 .pricing-card li {
-  margin-bottom: 10px;
+  color: var(--text);
+}
+
+.page .price {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 24px;
+  color: var(--yellow);
+}
+
+.pricing-card li {
+  margin-bottom: 12px;
+  font-size: 20px;
 }
 
 .pricing-card button {
-  margin-top: 20px;
-  padding: 12px 22px;
-  background: #111111;
-  color: white;
+  margin-top: 24px;
+  padding: 14px 26px;
+  background: var(--yellow);
+  color: var(--black);
   border: none;
   cursor: pointer;
-  font-weight: bold;
+  font-weight:700;
+    font-size: 20px;
 }
+
 .featured {
-  border: 2px solid #e63946;
+  border: 2px solid var(--red);
   transform: scale(1.03);
-  background: #fff5f5;
+  background: #221416;
 }
 .pricing-card button:hover {
   background: #e63946;

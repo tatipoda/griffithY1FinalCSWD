@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 function Membership() {
   return (
     <main className="page">
