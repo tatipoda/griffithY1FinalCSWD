@@ -1,3 +1,5 @@
+import styles from "./Classes.module.css";
+
 function Classes() {
   return (
     <main className="page">
@@ -7,15 +9,15 @@ function Classes() {
         and designed to help you progress safely.
       </p>
 
-      <section className="schedule-section">
+      <section className={styles.scheduleSection}>
         <h2>Weekly Schedule</h2>
-            <img src="/classes/schedule.png" alt="Schedule photo" />
+        <img src="/classes/schedule.png" alt="Schedule photo" />
       </section>
 
-      <section className="classes-grid">
-        <article className="class-card">
+      <section className={styles.classesGrid}>
+        <article className={styles.classCard}>
           <img src="/classes/yoga.jpg" alt="Yoga class" />
-          <div className="class-content">
+          <div className={styles.classContent}>
             <h2>Yoga & Mobility</h2>
             <p>
               A friendly and inclusive class for all genders, ages and skill
@@ -25,9 +27,9 @@ function Classes() {
           </div>
         </article>
 
-        <article className="class-card">
+        <article className={styles.classCard}>
           <img src="/classes/strength.jpg" alt="Strength class" />
-          <div className="class-content">
+          <div className={styles.classContent}>
             <h2>Strength Foundations</h2>
             <p>
               Perfect for people who want to build their first real strength
@@ -38,9 +40,9 @@ function Classes() {
           </div>
         </article>
 
-        <article className="class-card">
+        <article className={styles.classCard}>
           <img src="/classes/crossfit.jpg" alt="Crossfit class" />
-          <div className="class-content">
+          <div className={styles.classContent}>
             <h2>Crossfit</h2>
             <p>
               High-intensity circuit training that will test your power,
@@ -51,9 +53,9 @@ function Classes() {
           </div>
         </article>
 
-        <article className="class-card">
+        <article className={styles.classCard}>
           <img src="/classes/cardio.webp" alt="Cardio cycling class" />
-          <div className="class-content">
+          <div className={styles.classContent}>
             <h2>Cycle Cardio</h2>
             <p>
               A loud, energetic cycling class with fitness influencer Patricia
@@ -64,13 +66,14 @@ function Classes() {
         </article>
       </section>
 
-<section className="classes-cta">
-  <h2>Not sure which class fits you?</h2>
-  <p>
-    Contact our team and we will help you choose the best training option for your goals.
-  </p>
-  <a href="/contact">Contact Us</a>
-</section>
+      <section className={styles.classesCta}>
+        <h2>Not sure which class fits you?</h2>
+        <p>
+          Contact our team and we will help you choose the best training option
+          for your goals.
+        </p>
+        <a href="/contact">Contact Us</a>
+      </section>
     </main>
   );
 }

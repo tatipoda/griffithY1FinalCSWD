@@ -28,11 +28,11 @@
   color: var(--text);
 }
 
-.page .price {
+.price {
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 24px;
-  color: var(--yellow);
+   color: var(--yellow) !important;
 }
 
 .pricingCard li {

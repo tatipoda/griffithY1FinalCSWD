@@ -15,24 +15,32 @@ function HomePage() {
 </section>
 
       <section className={styles.section}>
-        <h2>Popular Classes</h2>
+        <h2>Our Classes</h2>
 
         <div className={styles.cards}>
-          <Card imageLink='./src/assets/card.png' 
-          cardName='Yoga' 
-          cardDetail='Improve flexibility and reduce stress'/>
+         <Card
+  imageLink="/classes/homeYoga.jpeg"
+  cardName="Yoga"
+  cardDetail="Improve flexibility and reduce stress"
+/>
 
-          <Card imageLink='./src/assets/card.png' 
-          cardName='Strength' 
-          cardDetail='Build muscle and increase power'/>
+         <Card
+  imageLink="/classes/homeStrength.webp"
+  cardName="Strength"
+  cardDetail="Build muscle and increase power"
+/>
 
-          <Card imageLink='./src/assets/card.png' 
-          cardName='Cardio' 
-          cardDetail='Boost endurance and burn calories'/>
+          <Card
+  imageLink="/classes/homeCardio.jpg"
+  cardName="Cardio"
+  cardDetail="Boost endurance and burn calories"
+/>
 
-          <Card imageLink='./src/assets/card.png' 
-          cardName='Crossfit' 
-          cardDetail='High intensity functional training'/>
+          <Card
+  imageLink="/classes/homeCrossfit.jpg"
+  cardName="Crossfit"
+  cardDetail="High intensity functional training"
+/>
         </div>
       </section>
 

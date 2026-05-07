@@ -1,0 +1,104 @@
+/*CLASSES PAGE*/
+
+.classesGrid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.classCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.classCard:hover {
+  transform: translateY(-6px);
+  border-color: var(--yellow);
+}
+
+.classCard img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.classСontent {
+  padding: 30px;
+}
+
+.classСontent h2 {
+  font-size: 30px;
+  margin-bottom: 16px;
+}
+
+.classСontent p {
+  color: var(--text-muted);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/*CLASSES PAGE - SCHEDULE*/
+
+.scheduleSection {
+  margin-top: 70px;
+  padding: 40px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scheduleSection h2 {
+  font-size: 34px;
+  margin-bottom: 16px;
+}
+
+/*CLASSES PAGE buttom call to action*/
+
+.classesCta {
+  margin-top: 70px;
+  padding: 45px;
+  text-align: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  border-radius: 14px;
+}
+
+.classesCta h2 {
+  font-size: 34px;
+  margin-bottom: 16px;
+}
+
+.classesCta p {
+  margin: 0 auto 24px;
+  color: var(--text-muted);
+}
+
+.classesCta a {
+  display: inline-block;
+  padding: 14px 26px;
+  background: var(--yellow);
+  color: var(--black);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/*RESPONSIVE*/
+
+@media (max-width: 900px) {
+  .classesGrid{
+    grid-template-columns: 1fr;
+  }
+
+  .classesGrid img {
+    height: 220px;
+  }
+}
