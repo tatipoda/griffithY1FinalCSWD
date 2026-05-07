@@ -19,7 +19,7 @@ function HomePage() {
 
         <div className={styles.cards}>
          <Card
-  imageLink="/classes/homeYoga.jpeg"
+       imageLink="/classes/homeYoga.jpeg"
   cardName="Yoga"
   cardDetail="Improve flexibility and reduce stress"
 />
@@ -57,8 +57,12 @@ function HomePage() {
           trainerDetail ='Pilatess/Bodybuilding'/>
 
           <Trainers imageLink='./src/assets/trainer.png'
-          trainerName ="Tonny Parker"
+          trainerName ="Sergiy Dukhota"
           trainerDetail ='Fitness/Crossfit'/>
+
+            <Trainers imageLink='./src/assets/trainer.png'
+          trainerName ="Patricia LeanBeefPatty"
+          trainerDetail ='Cardio/Fitness'/>
 
         </div>
       </section>
