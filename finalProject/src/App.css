@@ -21,3 +21,100 @@
   max-width: 700px;
   line-height: 1.6;
 }
+
+
+.classes-grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.class-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.class-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--yellow);
+}
+
+.class-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.class-content {
+  padding: 30px;
+}
+
+.class-content h2 {
+  font-size: 30px;
+  margin-bottom: 16px;
+}
+
+.class-content p {
+  color: var(--text-muted);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.schedule-section {
+  margin-top: 70px;
+  padding: 40px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.schedule-section h2 {
+  font-size: 34px;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 900px) {
+  .classes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .class-card img {
+    height: 220px;
+  }
+}
+.classes-cta {
+  margin-top: 70px;
+  padding: 45px;
+  text-align: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  border-radius: 14px;
+}
+
+.classes-cta h2 {
+  font-size: 34px;
+  margin-bottom: 16px;
+}
+
+.classes-cta p {
+  margin: 0 auto 24px;
+  color: var(--text-muted);
+}
+
+.classes-cta a {
+  display: inline-block;
+  padding: 14px 26px;
+  background: var(--yellow);
+  color: var(--black);
+  font-weight: 700;
+  text-decoration: none;
+}
