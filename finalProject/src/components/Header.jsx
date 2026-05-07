@@ -28,9 +28,15 @@ function toggleTheme() {
       </nav>
 
 <div className={styles.headerActions}>
-  <button onClick={toggleTheme} className={styles.themeButton}>
-    {theme === "dark" ? "Light" : "Dark"}
-  </button>
+
+    <div className={styles.themeSwitchContainer}>
+    <label className={styles.themeSwitch}>
+        <input type="checkbox" className={styles.themeToggle} onChange={toggleTheme}></input>
+        <span className={styles.slider}></span>
+    </label>
+    <span className={styles.switchName}>{theme === "dark" ? "Light mode" : "Dark mode"}</span>
+    </div>
+
 
   <Link to="/membership" className={styles.joinButton}>
     Join Now

@@ -2,6 +2,7 @@
 :root {
     /* surfaces (dark, layered from deepest to lightest) */
     --bg-header:    #0A0A0A;
+    --bg-footer:    #0A0A0A;
     --bg:           #141414;
     --bg-main:      #1C1C1C;
     --bg-card:      #242424;
@@ -60,6 +61,7 @@
 /*colors for light scheme*/
 [data-theme="light"] {
   --bg-header: #ffffff;
+  --bg-footer: #ffffff;
   --bg: #f7f7f7;
   --bg-main: #ffffff;
   --bg-card: #ffffff;
