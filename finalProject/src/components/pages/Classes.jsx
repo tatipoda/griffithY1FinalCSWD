@@ -1,4 +1,9 @@
 import styles from "./Classes.module.css";
+import schedule from '../../assets/classes/schedule.png';
+import yoga from '../../assets/classes/homeYoga.jpeg';
+import strength from '../../assets/classes/strength.jpg';
+import cardio from '../../assets/classes/homeCardio.jpg';
+import crossfit from '../../assets/classes/homeCrossfit.jpg';
 
 function Classes() {
   return (
@@ -11,12 +16,12 @@ function Classes() {
 
       <section className={styles.scheduleSection}>
         <h2>Weekly Schedule</h2>
-        <img src="/classes/schedule.png" alt="Schedule photo" />
+        <img src={schedule} alt="Schedule photo" />
       </section>
 
       <section className={styles.classesGrid}>
         <article className={styles.classCard}>
-          <img src="/classes/yoga.jpg" alt="Yoga class" />
+          <img src={yoga} alt="Yoga class" />
           <div className={styles.classContent}>
             <h2>Yoga & Mobility</h2>
             <p>
@@ -28,7 +33,7 @@ function Classes() {
         </article>
 
         <article className={styles.classCard}>
-          <img src="/classes/strength.jpg" alt="Strength class" />
+          <img src={strength} alt="Strength class" />
           <div className={styles.classContent}>
             <h2>Strength Foundations</h2>
             <p>
@@ -41,7 +46,7 @@ function Classes() {
         </article>
 
         <article className={styles.classCard}>
-          <img src="/classes/crossfit.jpg" alt="Crossfit class" />
+          <img src={cardio} alt="Crossfit class" />
           <div className={styles.classContent}>
             <h2>Crossfit</h2>
             <p>
@@ -54,7 +59,7 @@ function Classes() {
         </article>
 
         <article className={styles.classCard}>
-          <img src="/classes/cardio.webp" alt="Cardio cycling class" />
+          <img src={crossfit} alt="Cardio cycling class" />
           <div className={styles.classContent}>
             <h2>Cycle Cardio</h2>
             <p>

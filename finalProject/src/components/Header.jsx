@@ -1,22 +1,45 @@
 import { Link } from "react-router-dom";
+import {useState, useEffect} from 'react';
 import styles from "./Header.module.css";
-import { useState } from "react";
 
-function Header() {
-   const [theme, setTheme] = useState("dark");
+function Header({toggleTheme,theme}) {
+    const[burgerMenuOpen, setBurgerMenuOpen] = useState(false);
+    function toggleBurgerMenu(){
+        setBurgerMenuOpen(!burgerMenuOpen);
+    }
+    useEffect(() => {
+        const handleResize = () =>{
+            if(window.innerWidth > 900){
+                setBurgerMenuOpen(false);
+            }
+        };
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
-function toggleTheme() {
-  const newTheme = theme === "dark" ? "light" : "dark";
-  setTheme(newTheme);
-  document.documentElement.setAttribute("data-theme", newTheme);
-} 
   return (
     <header className={styles.header}>
-<Link to="/" className={styles.logo}>
-  <img src="/titanLogo.png" alt="Titan Lab Logo" />
-</Link>
+    <Link to="/" className={styles.logo}>
+    <img src="/titanLogo.png" alt="Titan Lab Logo" />
+    </Link>
+    <div className ={styles.mobileLogo}>
+        <Link to="/">
+        <h2>Titan Lab</h2>
+        </Link>
+    </div>
 
-      <nav className={styles.nav}>
+      <nav className={styles.navPc}>
+        <Link to="/">Home</Link>
+        <Link to="/about">About Us</Link>
+        <Link to="/classes">Classes</Link>
+        <Link to="/trainers">Trainers</Link>
+        <Link to="/membership">Membership</Link>
+        <Link to="/gallery">Gallery</Link>
+        <Link to="/contact">Contact</Link>
+        <Link to="/developers">Developers</Link>
+      </nav>
+
+      <nav className={`${styles.navMobile} ${burgerMenuOpen ? styles.open : ''}`}>
         <Link to="/">Home</Link>
         <Link to="/about">About Us</Link>
         <Link to="/classes">Classes</Link>
@@ -37,10 +60,16 @@ function toggleTheme() {
     <span className={styles.switchName}>{theme === "dark" ? "Light mode" : "Dark mode"}</span>
     </div>
 
-
   <Link to="/membership" className={styles.joinButton}>
     Join Now
   </Link>
+
+  <button className={`${styles.burgerButton} ${burgerMenuOpen ? styles.open : ''}`} onClick = {toggleBurgerMenu}>
+    <span className={styles.line1}></span>
+    <span className={styles.line2}></span>
+    <span className={styles.line3}></span>
+  </button>
+
 </div>
     </header>
   );

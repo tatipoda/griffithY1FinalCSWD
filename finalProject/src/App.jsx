@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import {useState} from 'react';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -14,9 +15,17 @@ import Developers from "./components/pages/Developers";
 import "./App.css";
 
 function App() {
+  const [theme, setTheme] = useState("dark");
+
+  function toggleTheme() {
+  const newTheme = theme === "dark" ? "light" : "dark";
+  setTheme(newTheme);
+  document.documentElement.setAttribute("data-theme", newTheme);
+} 
+
   return (
     <div className="root-layout">
-      <Header />
+      <Header toggleTheme={toggleTheme} theme={theme}/>
 
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -29,7 +38,7 @@ function App() {
         <Route path="/developers" element={<Developers />} />
       </Routes>
 
-      <Footer />
+      <Footer theme={theme} />
     </div>
   );
 }

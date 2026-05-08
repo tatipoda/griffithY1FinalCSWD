@@ -1,6 +1,10 @@
 import Card from './Card';
 import Trainers from './Trainers';
 import styles from "./HomePage.module.css";
+import yoga from '../../../assets/classes/homeYoga.jpeg';
+import strength from '../../../assets/classes/strength.jpg';
+import cardio from '../../../assets/classes/homeCardio.jpg';
+import crossfit from '../../../assets/classes/homeCrossfit.jpg';
 
 function HomePage() {
     
@@ -19,25 +23,25 @@ function HomePage() {
 
         <div className={styles.cards}>
          <Card
-       imageLink="/classes/homeYoga.jpeg"
+       imageLink={yoga}
   cardName="Yoga"
   cardDetail="Improve flexibility and reduce stress"
 />
 
          <Card
-  imageLink="/classes/homeStrength.webp"
+  imageLink={strength}
   cardName="Strength"
   cardDetail="Build muscle and increase power"
 />
 
           <Card
-  imageLink="/classes/homeCardio.jpg"
+  imageLink={cardio}
   cardName="Cardio"
   cardDetail="Boost endurance and burn calories"
 />
 
           <Card
-  imageLink="/classes/homeCrossfit.jpg"
+  imageLink={crossfit}
   cardName="Crossfit"
   cardDetail="High intensity functional training"
 />

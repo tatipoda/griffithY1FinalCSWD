@@ -1,10 +1,25 @@
 .footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-footer);
+    color: var(--text);
+}
+
+.gymName{
+    display: flex;
+    flex-direction: column;
+   width:40%;
+}
+.footerDetail{
   padding: 60px 6%;
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  display: flex;
   gap: 50px;
-  background-color: var(--bg-footer);
-  color: var(--text);
+  width:100%;
+}
+.footerColumns{
+    display: flex;
+    justify-content: space-evenly;
+    width:60%;
 }
 
 /* headers */
@@ -42,22 +57,46 @@
   transform: translateX(3px);
 }
 
-/* bottom line */
-.footer::after {
-  content: "© 2026 Titan Lab. All rights reserved.";
-  grid-column: 1 / -1;
-  margin-top: 30px;
-  padding-top: 20px;
-  border-top: 1px solid var(--border-strong);
-  font-size: 13px;
-  color: var(--text-muted);
+.copyRight{
+    display: flex;
+    height: 100%;
+    width: 93%;
+    margin: 0 auto;
+    border-top: 1px solid var(--border-strong);
+    color: var(--text-muted);
+    justify-content: space-between;
+    align-items: center;
 }
+.copyRight p{
+     padding: 20px 0 10px 20px;
+    font-size: var(--fs-code);
+}
+.icons{
+    padding-right:30px;
+    display: flex;
+}
+.icons a:hover{
+     transform: translateX(0);
+}
+.socialLogo{
+    cursor:pointer;
+    height:25px;
+    padding-right:20px;
+}
+
 
 /* Mobile */
 @media (max-width: 800px) {
-  .footer {
-    grid-template-columns: 1fr;
-    gap: 30px;
+  .footerDetail {
+    flex-direction: column;
+  }
+  .footerColumns{
+    width: 100%;
+  }
+  .gymName{
+
+    align-items: center;
+    width: 100%;
   }
 }
 

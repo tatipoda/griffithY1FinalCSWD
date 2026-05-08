@@ -1,14 +1,22 @@
 import { Link } from "react-router-dom";
 import styles from "./Footer.module.css";
+import facebookBlack from '../assets/icons/facebookBlack.png';
+import fecebookWhite from '../assets/icons/facebookWhite.png';
+import instagramBlack from '../assets/icons/instagramBlack.png';
+import instagramWhite from '../assets/icons/instagramWhite.png';
+import tikTokBlack from '../assets/icons/tikTokBlack.png';
+import tikTokWhite from '../assets/icons/tikTokWhite.png';
 
-function Footer() {
+function Footer({theme}) {
   return (
     <footer className={styles.footer}>
-      <div>
+        <div className={styles.footerDetail}>
+      <div className={styles.gymName}>
         <h2>Titan Lab</h2>
         <p>Modern fitness club for strength, health and discipline.</p>
       </div>
 
+      <div className={styles.footerColumns}>
       <div>
         <h3>Quick Links</h3>
         <Link to="/">Home</Link>
@@ -28,6 +36,17 @@ function Footer() {
         <h3>Project</h3>
         <Link to="/gallery">Gallery</Link>
         <Link to="/developers">Developers</Link>
+      </div>
+      </div>
+      </div>
+      <div className={styles.copyRight}>
+        <p>© 2026 Titan Lab. All rights reserved.</p>
+        <div className={styles.icons}>
+            <a href="https://www.facebook.com/"><img src={theme === 'dark'? fecebookWhite: facebookBlack} className={styles.socialLogo}/></a>
+            <a href="https://www.instagram.com/"><img src={theme === 'dark'? instagramWhite: instagramBlack} className={styles.socialLogo}/></a>
+            <a href="https://www.tiktok.com/"><img src={theme === 'dark'? tikTokWhite: tikTokBlack} className={styles.socialLogo}/></a>
+        </div>
+
       </div>
     </footer>
   );
