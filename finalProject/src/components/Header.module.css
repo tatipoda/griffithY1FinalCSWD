@@ -213,6 +213,7 @@
     }
     .mobileLogo{
         display: flex;
+    
     }
 }
 @media (max-width: 650px){
@@ -220,7 +221,7 @@
         flex-direction: column;
         height:150px;
         padding:0;
-        gap:0;
+        gap:10px;
         align-items: center;
         justify-content: center;
     }
@@ -228,11 +229,17 @@
         display: flex;
         justify-content:space-evenly;
         width: 100%;
+     
+    }
+    .burgerButton{
+        margin-right:15px;
     }
     .mobileLogo{
-
        justify-content: center;
        width: 100%;
+    }
+    .joinButton{
+        margin-right:25px;
     }
    
    
