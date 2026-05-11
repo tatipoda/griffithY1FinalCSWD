@@ -1,0 +1,133 @@
+section {
+  margin-bottom: 80px;
+}
+/* ____________preview___________ */
+.preview {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
+    url("../../assets/about/weightlifting.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-color: rgb(0, 0, 0);
+
+  min-height: 80vh;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+}
+
+.previewInner {
+  max-width: 600px;
+}
+.previewTitle,
+.previewParagraph {
+  color: var(--always-white-text);
+}
+.previewSubtitle {
+  color: var(--text-yellow-deep);
+}
+
+/* __________ourHistory_________ */
+
+.ourHistoryInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.oldGym {
+  max-width: 100%;
+}
+
+/* ______________principles____________ */
+
+.principlesInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardsWrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 200px;
+  background-color: var(--bg-card);
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.valueIcon {
+  color: var(--yellow-deep);
+}
+
+/* __________insideGym______________ */
+
+.insideGymInner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.insideGymInfo{
+max-width: 500px;
+}
+.insideGymTitle,
+.insideGymText{
+    text-align: center;
+}
+
+
+.slider {
+  width: 100%;
+  height: 300px;
+  background: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ____________Adaptation___________ */
+
+@media (min-width: 550px) {
+  .cardsWrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .card {
+    width: 250px;
+  }
+}
+
+@media (min-width: 768px) {
+  .ourHistoryInner {
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 50px;
+  }
+  .oldGym {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cardsWrapper {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+  }
+
+  .card {
+    width: 100%;
+  }
+}

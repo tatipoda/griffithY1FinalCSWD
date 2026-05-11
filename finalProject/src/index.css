@@ -12,6 +12,9 @@
     --text:         #F5F5F5;
     --text-muted:   #B8B8B8;
     --text-dim:     #8A8A8A;
+    --text-yellow-deep:#e69900;
+
+    --always-white-text:#F5F5F5;
 
     /* borders */
     --border:       #2E2E2E;
@@ -30,6 +33,7 @@
     /* pure */
     --black:        #000000;
     --white:        #FFFFFF;
+
 
     /* Font sizes */
     --fs-display: 48px;
@@ -73,6 +77,8 @@
 
   --border: #dddddd;
   --border-strong: #cccccc;
+
+ 
 }
 
 html {
