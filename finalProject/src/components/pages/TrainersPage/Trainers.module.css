@@ -1,0 +1,213 @@
+/*  _____________trainerTeam__________ */
+
+.trainersTeam {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)),
+    url("../../../assets/trainers/trainersTeam.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 30%;
+  background-attachment: scroll;
+  background-color: rgb(0, 0, 0);
+
+  min-height: 50vh;
+  width: 100%;
+}
+
+.trainersTeamInner {
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(15%);
+}
+
+.trainersTeamInfo {
+  text-align: center;
+  max-width: 600px;
+}
+
+.trainersTeamTitle,
+.trainersTeamText {
+  color: var(--always-white-text);
+}
+.trainersTeamSubtitle {
+  color: var(--text-yellow-deep);
+}
+
+/* inners */
+
+.benefitsInner,
+.benefitsInner,
+.howToTrain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* cardContainers */
+
+.benefitsContainer,
+.coachesContainer {
+  display: grid;
+  gap: 20px;
+}
+
+/* cardTitles */
+
+.benefitsTitle,
+.coachesTitle,
+.howToTrainTitle {
+  text-align: center;
+}
+
+/* ___________benefits_______________ */
+
+.benefitsCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 200px;
+  background-color: var(--bg-card);
+  border-radius: 5px;
+  padding: 10px 5px;
+}
+
+.benefitsCardText {
+  color: var(--text-dim);
+}
+
+/* _____________coaches____________ */
+
+.coachesCard {
+  background-color: var(--bg-card);
+  overflow: hidden;
+  border-radius: 5px;
+  max-width: 500px;
+  margin: 0 auto;
+   display: flex;
+  flex-direction: column;
+}
+.coachesCard img {
+  width: 100%;
+}
+
+.coachesCardText {
+  padding: 10px 20px;
+}
+
+.coachesCardText h4 {
+  color: var(--text-yellow-deep);
+}
+
+/* __________howToTrain ___________*/
+.howToTrainTitle {
+  margin-bottom: 40px;
+}
+
+.howToTrainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.howToTrainCard {
+  background-color: var(--bg-card);
+  border: 2px solid var(--border-strong);
+  border-radius: 10px;
+  padding: 30px 20px;
+  text-align: center;
+  position: relative;
+
+  width: 300px;
+  flex-shrink: 0;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.howToTrainCard::before {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--yellow-deep);
+  border-radius: 50%;
+  position: absolute;
+  top: -12%;
+  right: 50%;
+  transform: translate(50%);
+}
+
+.howToTrainCard:nth-child(1)::before {
+  content: "1";
+}
+
+.howToTrainCard:nth-child(2)::before {
+  content: "2";
+}
+.howToTrainCard:nth-child(3)::before {
+  content: "3";
+}
+
+/* ____________Adaptation___________ */
+
+@media (min-width: 550px) {
+  .benefitsContainer {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .benefitsCard {
+    width: 220px;
+    padding: 20px 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .coachesContainer {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+  .coachesCard {
+    width: 100%;
+  }
+
+  .howToTrainContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  }
+
+
+
+}
+
+@media (min-width: 1024px) {
+  .benefitsContainer {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+
+  .benefitsCard {
+    width: 220px;
+    padding: 20px 15px;
+  }
+
+.howToTrainContainer {
+    flex-wrap: nowrap;
+  
+  }
+
+
+
+}
+@media (min-width: 1440px) {
+}
