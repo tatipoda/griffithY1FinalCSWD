@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import {useState, useEffect} from 'react';
+import DropDownMenu from "./DropDownMenu";
 import styles from "./Header.module.css";
 
 function Header({toggleTheme,theme}) {
@@ -9,13 +10,21 @@ function Header({toggleTheme,theme}) {
     }
     useEffect(() => {
         const handleResize = () =>{
-            if(window.innerWidth > 900){
-                setBurgerMenuOpen(false);
+            if(window.innerWidth > 1250){
+                setBurgerMenuOpen(prev => {
+                  if(prev == true) return false;
+                  return prev;
+                });
             }
         };
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
+
+    const aboutUsItems = [
+        {id:0, name:'About Titan Lab', link:'/about'}, 
+        {id:1, name:'FAQS', link:'/faqs'}
+    ]
 
   return (
     <header className={styles.header}>
@@ -30,7 +39,7 @@ function Header({toggleTheme,theme}) {
 
       <nav className={styles.navPc}>
         <Link to="/">Home</Link>
-        <Link to="/about">About Us</Link>
+        <DropDownMenu navItem = 'About us' dropDownMenuItems = {aboutUsItems} isMobile = {false}/>
         <Link to="/classes">Classes</Link>
         <Link to="/trainers">Trainers</Link>
         <Link to="/membership">Membership</Link>
@@ -41,7 +50,7 @@ function Header({toggleTheme,theme}) {
 
       <nav className={`${styles.navMobile} ${burgerMenuOpen ? styles.open : ''}`}>
         <Link to="/">Home</Link>
-        <Link to="/about">About Us</Link>
+        <DropDownMenu navItem = 'About us' dropDownMenuItems = {aboutUsItems}  isMobile = {true} />
         <Link to="/classes">Classes</Link>
         <Link to="/trainers">Trainers</Link>
         <Link to="/membership">Membership</Link>

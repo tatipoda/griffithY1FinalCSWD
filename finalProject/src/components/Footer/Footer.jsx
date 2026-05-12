@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import styles from "./Footer.module.css";
-import facebookBlack from '../assets/icons/facebookBlack.png';
-import fecebookWhite from '../assets/icons/facebookWhite.png';
-import instagramBlack from '../assets/icons/instagramBlack.png';
-import instagramWhite from '../assets/icons/instagramWhite.png';
-import tikTokBlack from '../assets/icons/tikTokBlack.png';
-import tikTokWhite from '../assets/icons/tikTokWhite.png';
+import facebookBlack from '../../assets/icons/facebookBlack.png';
+import fecebookWhite from '../../assets/icons/facebookWhite.png';
+import instagramBlack from '../../assets/icons/instagramBlack.png';
+import instagramWhite from '../../assets/icons/instagramWhite.png';
+import tikTokBlack from '../../assets/icons/tikTokBlack.png';
+import tikTokWhite from '../../assets/icons/tikTokWhite.png';
 
 function Footer({theme}) {
   return (
