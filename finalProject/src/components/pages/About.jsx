@@ -21,7 +21,7 @@ function About() {
             <p className={styles.previewParagraph}>
               Titan Lab is a modern Dublin gym built around one simple idea —
               training should make you stronger, not just tired. We combine
-              professional coaching, a welcoming community, and a clean,
+              professional coaching, a welcoming community and a clean,
               well-equipped facility so every member, from total beginner to
               competitive athlete, has a place to grow.
             </p>
