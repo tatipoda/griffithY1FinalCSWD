@@ -11,7 +11,7 @@ import Membership from "./components/pages/Membership";
 import Gallery from "./components/pages/Gallery";
 import Contact from "./components/pages/Contact";
 import Developers from "./components/pages/Developers";
-import Faqs from "./components/pages/Faqs";
+import Faqs from "./components/pages/FaqsPage/Faqs";
 
 import "./App.css";
 

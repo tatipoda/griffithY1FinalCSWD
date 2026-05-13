@@ -1,0 +1,122 @@
+
+.preview{
+    width: 100%;
+    margin: 50px 0;
+}
+.preview h1{
+  font-size: 56px;
+  margin-bottom: 18px;
+}
+.preview p {
+  font-size: 20px;
+  color: var(--text-muted);
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+.previewInner{
+
+ 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.faqsInner{
+    display: flex;
+    flex-direction: column;
+}
+.buttonsContainer{
+    width:100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.sectionButton{
+    padding:25px;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 10px;
+    position: relative;
+    background-color: var(--text-dim);
+    color:var(--text);
+    border:none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.sectionButton.active{
+    background-color: var(--yellow);
+    color:var(--bg)
+}
+.sectionButton.active::after{
+    content:"";
+    position:absolute;
+    bottom:-15px;
+    left:50%;
+    transform: translateX(-50%);
+    border-left:15px solid transparent;
+    border-right:15px solid transparent;
+    border-top:15px solid var(--yellow);
+}
+.questionsContainer{
+    margin-top:40px;
+
+    display: flex;
+   justify-content: space-around;
+
+}
+
+.leftColumn, .rightColumn{
+    display: flex;
+    flex-direction: column;
+    width:50%;
+
+}
+.question{
+    background-color: var(--bg);
+    color: var(--text);
+    font-size: 20px;
+    padding:5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    cursor:pointer;
+    border:none;
+}
+.closeOpenButton{
+    position:relative;
+    width:20px;
+    height:20px
+}
+.closeOpenButton span{
+    display: block;
+    position: absolute;
+    width:20px;
+    height:3px;
+    background-color: var(--yellow);
+    top:50%;
+    transition: transform 0.3s ease-in-out;
+}
+.line1{
+    transform: translateY(-50%);
+}
+.line2{
+    transform: translateY(-50%) rotate(90deg);
+}
+.question.questionOpen .line2 {
+    transform: translateY(-50%) rotate(0deg);
+}
+
+.answer{
+    max-height: 0;
+    font-size:17px;
+    padding: 0 10px;
+    margin-top:10px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+.answer.open{
+    max-height:300px;
+ 
+}
