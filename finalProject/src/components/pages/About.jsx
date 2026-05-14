@@ -5,7 +5,6 @@ import { RiUserCommunityFill } from "react-icons/ri";
 import { GiProgression } from "react-icons/gi";
 import { MdOutlineSecurity } from "react-icons/md";
 
-import weightlifting from "../../assets/about/weightlifting.jpg";
 import oldGym from "../../assets/about/oldGym.jpg";
 
 function About() {

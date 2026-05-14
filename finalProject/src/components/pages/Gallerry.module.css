@@ -1,0 +1,60 @@
+.preview{
+    width: 100%;
+    background:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)),
+    url("../../assets/gallerry/header.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 30%;
+  background-attachment: scroll;
+  background-color: rgb(0, 0, 0);
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom:0;
+}
+.previewInner{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.preview h1{
+    color:white;
+  font-size: 56px;
+  margin-bottom: 12px;
+}
+.preview p {
+  font-size: 20px;
+  color: var(--yellow-deep);
+  font-weight: bold;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+
+.tabsContainer{
+    width:100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin:30px 0;
+}
+.tab{
+    padding:10px 25px;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 15px;
+    position: relative;
+    background-color: var(--text-dim);
+    color:var(--text);
+    border:none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.tab.active{
+    background-color: var(--yellow);
+    color:var(--bg)
+}

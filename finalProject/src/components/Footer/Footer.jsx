@@ -30,6 +30,7 @@ function Footer({theme}) {
         <Link to="/membership">Pricing</Link>
         <Link to="/membership">Plans</Link>
         <Link to="/contact">Contact</Link>
+         <Link to="/faqs">FAQS</Link>
       </div>
 
       <div>

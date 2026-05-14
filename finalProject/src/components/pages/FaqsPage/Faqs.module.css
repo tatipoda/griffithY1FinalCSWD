@@ -30,6 +30,7 @@
     width:100%;
     display: flex;
     justify-content: space-evenly;
+    margin-bottom:30px;
 }
 .sectionButton{
     padding:25px;
