@@ -93,7 +93,7 @@ const sliderPhotos = (activeTab === 'All' ? filteredPhotos : filteredPhotos.slic
                   }}>
                   {sliderPhotos.map((photo) => (
                       <SplideSlide key={photo.id}>
-                      <img src={photo.src} alt={photo.alt} style={{ width: '100%', height: '400px', objectFit: 'cover' }} />
+                      <img src={photo.src} alt={photo.alt} className={styles.slideImg} />
                       </SplideSlide>
                       ))}
                   </Splide>
