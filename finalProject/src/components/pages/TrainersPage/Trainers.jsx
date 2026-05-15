@@ -105,6 +105,7 @@ function Trainers() {
           </div>
         </div>
       </section>
+      
     </main>
   );
 }

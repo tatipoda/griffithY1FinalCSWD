@@ -2,7 +2,7 @@
     width: 100%;
     background:
     linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)),
-    url("../../assets/gallerry/header.png");
+    url("../../../assets/gallerry/header.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center 30%;

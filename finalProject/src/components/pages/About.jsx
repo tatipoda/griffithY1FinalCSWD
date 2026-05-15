@@ -7,6 +7,7 @@ import { MdOutlineSecurity } from "react-icons/md";
 
 import oldGym from "../../assets/about/oldGym.jpg";
 
+import GallerySlider from "./Gallery/GallerySlider";
 function About() {
   return (
     <main>
@@ -108,13 +109,10 @@ function About() {
                 studio — there's room for every type of training.
               </p>
             </div>
-            <div className={styles.slider}>
-              {" "}
-              <strong>Slider</strong>
-            </div>
           </div>
         </div>
       </section>
+      <GallerySlider />
     </main>
   );
 }

@@ -8,7 +8,7 @@ import About from "./components/pages/About";
 import Classes from "./components/pages/Classes";
 import Trainers from "./components/pages/TrainersPage/Trainers";
 import Membership from "./components/pages/Membership";
-import Gallery from "./components/pages/Gallery";
+import Gallery from "./components/pages/Gallery/Gallery";
 import Contact from "./components/pages/Contact";
 import Developers from "./components/pages/Developers";
 import Faqs from "./components/pages/FaqsPage/Faqs";
