@@ -4,9 +4,9 @@ import { FaDumbbell } from "react-icons/fa";
 import { RiUserCommunityFill } from "react-icons/ri";
 import { GiProgression } from "react-icons/gi";
 import { MdOutlineSecurity } from "react-icons/md";
-
 import oldGym from "../../assets/about/oldGym.jpg";
 
+import  GalleryProvider from './Gallery/GalleryProvider';
 import GallerySlider from "./Gallery/GallerySlider";
 function About() {
   return (
@@ -112,7 +112,9 @@ function About() {
           </div>
         </div>
       </section>
-      <GallerySlider />
+      <GalleryProvider>
+      <GallerySlider/>
+      </GalleryProvider>
     </main>
   );
 }

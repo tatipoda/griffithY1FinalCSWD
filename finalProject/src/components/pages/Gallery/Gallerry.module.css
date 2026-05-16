@@ -1,7 +1,7 @@
 .preview{
     width: 100%;
     background:
-    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)),
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
     url("../../../assets/gallerry/header.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -21,45 +21,113 @@
     align-items: center;
     justify-content: center;
 }
+
 .preview h1{
     color:white;
-  font-size: 56px;
-  margin-bottom: 12px;
+  font-size: 90px;
+  margin-bottom: 0;
 }
-.preview p {
-  font-size: 20px;
-  color: var(--yellow-deep);
-  font-weight: bold;
+.description {
+  font-size: 28px;
+  font-style: italic;
+  color: var(--yellow);
   max-width: 700px;
-  line-height: 1.6;
+  margin:0;
+
+}
+
+.dividerLine{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:4px;
+    margin:15px 0;
+}
+.dividerLine::before, .dividerLine::after{
+    content:"";
+    width:70px;
+    height:3px;
+}
+.dividerLine::before{
+     background: linear-gradient(to left, var(--yellow), transparent);
+}
+.dividerLine::after{
+     background: linear-gradient(to right, var(--yellow), transparent);
+}
+.diamond{
+    width:5px;
+    height: 8px;
+    border-radius: 10px;
+    background-color: var(--yellow);
+}
+.motivation{
+    text-align: center;
+    width:500px;
+  
+    font-size:18px;
+    color:var(--text-muted)
+}
+section{
+margin-bottom:20px;
+ 
 }
 
 
 .tabsContainer{
-    width:100%;
+    width:600px;
     display: flex;
-    justify-content: space-evenly;
-    margin:30px 0;
+    align-items: center;
+    justify-content: center;
+    margin:20px auto;
+    gap:20px;
 }
 .tab{
-    padding:10px 25px;
-    font-size: 17px;
-    font-weight: bold;
-    border-radius: 15px;
+    width:120px;
+    height:50px;
+    font-size: 18px;
+
+    border-radius: 24px;
     position: relative;
     background-color: var(--text-dim);
     color:var(--text);
     border:none;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+   text-align: center;
 }
 .tab.active{
     background-color: var(--yellow);
     color:var(--bg)
 }
-.slideImg{
-    width: 100%;
-    height: 400px;
+.gridPhotos{
+    width:90%;
+    margin: 0 auto;
+    margin-bottom:50px;
+
+}
+.gridTitle{
+    border-left:4px solid var(--yellow);
+    padding-left:12px;
+    font-size: 25px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:5px;
+
+}
+.gridPhoto{
+    height:220px; 
+    border:1px solid var(--border-strong);
+    width:100%;
     object-fit: cover;
+    border-radius: 8px;
+    transform: scale(0.97);
+    transition: transform 0.3s ease;
+    cursor:pointer;
+}
+.gridPhoto:hover{
+    transform: scale(1);
+    border-color:var(--yellow)
+}
+.gridPhotoWide{
+    grid-column: span 2;
 }
