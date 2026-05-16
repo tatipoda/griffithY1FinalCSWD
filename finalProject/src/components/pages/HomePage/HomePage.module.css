@@ -64,6 +64,15 @@
   margin-bottom: 36px;
 }
 
+.sectionIntro {
+  max-width: 650px;
+  margin: -18px auto 36px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -85,7 +94,7 @@
 
 .card h3,
 .card p,
-.card button {
+.cardButton {
   margin-left: 18px;
   margin-right: 18px;
 }
@@ -102,6 +111,44 @@
   margin-bottom: 18px;
 }
 
+<<<<<<< HEAD
+=======
+.cardButton {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 12px 24px;
+  background: var(--yellow);
+  color: var(--black);
+  text-decoration: none;
+  font-weight: var(--fw-bold);
+}
+
+.cardButton:hover {
+  background: var(--yellow-deep);
+  color: var(--black);
+}
+
+.sectionAction {
+  margin-top: 36px;
+  text-align: center;
+}
+
+.sectionButton {
+  display: inline-block;
+  padding: 14px 28px;
+  background: transparent;
+  color: var(--yellow);
+  border: 1px solid var(--yellow);
+  text-decoration: none;
+  font-weight: var(--fw-bold);
+}
+
+.sectionButton:hover {
+  background: var(--yellow);
+  color: var(--black);
+}
+
+>>>>>>> 8d4150a99c95f3756da3d6f9c294217fd7a372a3
 .slideContainer{
   position: relative;
   overflow: hidden;
@@ -153,10 +200,6 @@
 
 
 }
-
-
-
-
 
 /* .trainers {
   display: grid;

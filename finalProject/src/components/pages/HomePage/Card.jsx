@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from './HomePage.module.css';
 
 function Card({imageLink, cardName, cardDetail}){
@@ -6,7 +7,7 @@ function Card({imageLink, cardName, cardDetail}){
         <img src={imageLink} className={styles.cardImage} alt='image of a class'/>
         <h3>{cardName}</h3>
         <p>{cardDetail}</p>
-        <button>Learn More</button>
+        <Link to="/classes" className={styles.cardButton}>Learn More</Link>
     </article>
     );
 }

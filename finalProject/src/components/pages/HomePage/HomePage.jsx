@@ -41,9 +41,17 @@ function HomePage() {
       <section className={styles.section}>
         <h2>Our Classes</h2>
 
-        <div className={styles.cards}>
-          {cards.map(card => <Card key={card.id} imageLink={card.imageLink} cardName={card.cardName} cardDetail={card.cardDetail}/>)}
-        </div>
+     <p className={styles.sectionIntro}>Explore our most popular group training options, then check the full weekly schedule.</p>
+
+      <div className={styles.cards}>
+        {cards.map(card => <Card key={card.id} imageLink={card.imageLink} cardName={card.cardName} cardDetail={card.cardDetail}/>)}
+      </div>
+
+      <div className={styles.sectionAction}>
+       <Link to="/classes" className={styles.sectionButton}> 
+       View Full Schedule
+       </Link>
+       </div>
       </section>
 
       <section className={styles.section}>
