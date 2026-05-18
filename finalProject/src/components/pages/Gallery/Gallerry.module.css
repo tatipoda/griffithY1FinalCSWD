@@ -124,10 +124,16 @@ margin-bottom:20px;
     transition: transform 0.3s ease;
     cursor:pointer;
 }
+
 .gridPhoto:hover{
     transform: scale(1);
     border-color:var(--yellow)
 }
 .gridPhotoWide{
     grid-column: span 2;
+}
+.gridPhotoVertical{
+    grid-column: span 1;
+    height: 500px;
+    
 }

@@ -265,7 +265,8 @@ td {
 
 /* Splide gallery slider styling */
 .galleryContainer{
-  width:90%;
+  width:92%;
+
   margin:0 auto;
 
 }
@@ -277,9 +278,11 @@ td {
   width: 100%; 
   height: 100%;
   border-radius: 16px;
-  /* object-fit: cover; */
+  object-fit: cover;
+  object-position:center;
 }
 .galleryContainer .splide__slide{
+  height:450px;
   opacity: 0.5;
 }
 .galleryContainer .splide__slide.is-active{

@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import {GalleryContext} from './GalleryProvider';
 
 function GalleryGrid(){
-  const{activeTab, setActiveTab, sliderPhotos} = useContext(GalleryContext);
+  const{activeTab, setActiveTab, sliderPhotos, trainersPhotos} = useContext(GalleryContext);
 
   return(
     <main>
@@ -11,7 +11,12 @@ function GalleryGrid(){
         <div className={styles.gridPhotosInner}>
           <h3 className={styles.gridTitle}> Browse All Photos </h3>
           <div className={styles.grid}>
-            {sliderPhotos.map(photo => 
+            {activeTab === "Trainers" ? (
+            trainersPhotos.map(photo => 
+            <img key = {photo.id} src={photo.src} alt={photo.alt} 
+            className={`${styles.gridPhoto}  ${styles.gridPhotoVertical}`} />)
+            ): 
+            sliderPhotos.map(photo => 
             <img key = {photo.id} src={photo.src} alt={photo.alt} 
             className={`${styles.gridPhoto} ${photo.wide ? styles.gridPhotoWide : ''}`} />)}
           </div>

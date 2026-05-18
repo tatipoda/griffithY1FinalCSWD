@@ -5,7 +5,7 @@ import { useContext } from 'react';
 import {GalleryContext} from './GalleryProvider';
 
 function GallerySlider() {
-  const{activeTab, setActiveTab, sliderPhotos} = useContext(GalleryContext);
+  const{activeTab, setActiveTab, sliderPhotos, trainersPhotos} = useContext(GalleryContext);
 
   return (
     <main>
@@ -40,7 +40,30 @@ function GallerySlider() {
 
             <div className="galleryContainer">
               <div className={styles.sliderInner}>
-              <Splide
+                {activeTab === "Trainers" ? (
+                  <Splide
+                  options={{
+                type   : 'loop',
+                perPage: 3,
+                focus  : 'center',
+                padding: '5%',  
+                gap: '1.5rem',
+                pagination: true,
+                arrows: true, 
+                 }}>
+                   {trainersPhotos.map((photo) => (
+                  <SplideSlide key={photo.id}>
+                    <img
+                      src={photo.src}
+                      alt={photo.alt}
+                    />
+                  </SplideSlide>
+                ))}
+                
+                  </Splide>
+
+                ):
+                   <Splide
                 options={{
                   type: "loop",
                   focus:'center',
@@ -48,7 +71,7 @@ function GallerySlider() {
                   gap:'1.5rem',
                   pagination: true,
                   arrows: true,
-                  padding: '27%',
+                  padding: '20%',
                  }}>
                 {sliderPhotos.map((photo) => (
                   <SplideSlide key={photo.id}>
@@ -58,7 +81,8 @@ function GallerySlider() {
                     />
                   </SplideSlide>
                 ))}
-              </Splide>
+              </Splide>}
+           
 
 
               </div>

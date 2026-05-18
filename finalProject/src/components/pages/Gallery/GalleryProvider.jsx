@@ -5,7 +5,7 @@ import floor2 from "../../../assets/gallerry/gym-floor-2.png";
 import floor3 from "../../../assets/gallerry/gym-floor-3.png";
 import floor4 from "../../../assets/gallerry/gym-floor-4.png";
 import floor5 from "../../../assets/gallerry/gym-floor-5.png";
-import floor6 from "../../../assets/gallerry/gym-floor-6.png";
+// import floor6 from "../../../assets/gallerry/gym-floor-6.png";
 
 import classes1 from "../../../assets/gallerry/classes-1.png";
 import classes2 from "../../../assets/gallerry/classes-2.png";
@@ -14,14 +14,14 @@ import classes4 from "../../../assets/gallerry/classes-4.png";
 import classes5 from "../../../assets/gallerry/classes-5.png";
 // import classes6 from '../../assets/gallerry/classes-6.png';
 
-// import trainers1 from '../../assets/gallerry/trainers-1.png';
-// import trainers2 from '../../assets/gallerry/trainers-2.png';
-// import trainers3 from '../../assets/gallerry/classes-3.png';
-// import trainers4 from '../../assets/gallerry/classes-4.png';
-// import trainers5 from '../../assets/gallerry/classes-5.png';
-// import trainers6 from '../../assets/gallerry/classes-6.png';
+import trainers1 from '../../../assets/trainers/JackOConnor.jpg';
+import trainers2 from '../../../assets/trainers/PatriciaLeanBeefPatty.jpg';
+import trainers3 from '../../../assets/trainers/SarahColins.jpg';
+import trainers4 from '../../../assets/trainers/trainer1.jpg';
+import trainers5 from '../../../assets/trainers/trainer2.png';
+import trainers6 from '../../../assets/trainers/trainer3.png';
 
-export const photos = [
+export const gymPhotos = [
     {
       id: 0,
       src: floor1,
@@ -58,13 +58,13 @@ export const photos = [
       wide:true
     },
     { id: 5, 
-    src: floor6, 
+    src: floor5, 
     category: "Gym floor", 
     alt: "Dumbbells rack", 
     wide:false},
 
     { id: 6, 
-    src: floor6, 
+    src: floor5, 
     category: "Gym floor", 
     alt: "Dumbbells rack", 
     wide:false},
@@ -112,56 +112,59 @@ wide:false},
       category: "Classes",
       alt: "Group fitness session",
       wide:true
-    },
+    }
+      ];
+    const trainersPhotos = [
 
     {
-      id: 14,
-      src: classes1,
+      id: 0,
+      src: trainers1,
       category: "Trainers",
       alt: "Personal trainer coaching a client",
       wide:false
     },
     {
-      id: 15,
-      src: classes1,
+      id: 1,
+      src: trainers2,
       category: "Trainers",
       alt: "Trainer demonstrating proper form",
       wide:false
     },
     {
-      id: 16,
-      src: classes1,
+      id: 2,
+      src: trainers3,
       category: "Trainers",
       alt: "One on one training session",
       wide:false
     },
     {
-      id: 17,
-      src: classes1,
+      id: 3,
+      src: trainers4,
       category: "Trainers",
       alt: "Trainer assisting with stretching",
       wide:false
     },
-    { id: 18, 
-    src: classes1, 
+    { id: 4, 
+    src: trainers5, 
     category: "Trainers", 
     alt: "Trainer team photo",
     wide:true
 },
     {
-      id: 19,
-      src: classes1,
+      id: 5,
+      src: trainers6,
       category: "Trainers",
       alt: "Trainer running a group warmup",
       wide:false
     },
-      {id: 20,
-      src: classes1,
+      {id: 6,
+      src: trainers6,
       category: "Trainers",
       alt: "Trainer running a group warmup",
       wide:false
     }
-  ];
+     ];
+
 
 export const GalleryContext = createContext();
 
@@ -170,14 +173,14 @@ function GalleryProvider({children}){
     
     const filteredPhotos =
         activeTab === "All"
-        ? photos
-        : photos.filter((photo) => photo.category === activeTab);
+        ? gymPhotos
+        : gymPhotos.filter((photo) => photo.category === activeTab);
 
     const sliderPhotos =
-        activeTab === "All" ? filteredPhotos : filteredPhotos.slice(0, 7);
+        activeTab === "All" ? filteredPhotos : filteredPhotos.slice(0, 6);
 
         return(
-            <GalleryContext.Provider value={{activeTab, setActiveTab, sliderPhotos}}>
+            <GalleryContext.Provider value={{activeTab, setActiveTab, sliderPhotos, trainersPhotos}}>
                 {children}
             </GalleryContext.Provider>
         );

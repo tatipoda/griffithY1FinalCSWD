@@ -73,17 +73,28 @@
     width:50%;
 
 }
+.questionAnswerContainer{
+    background-color: var(--bg-card);
+    border-radius: 20px;
+    margin:5px;
+    padding:10px 0 0 10px;
+    border: none;
+}
 .question{
     background-color: var(--bg);
     color: var(--text);
     font-size: 20px;
-    padding:5px 10px;
+    padding:10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    border: none;
+  
     cursor:pointer;
-    border:none;
+    
+    background-color: var(--bg-card);
+    
 }
 .closeOpenButton{
     position:relative;
@@ -113,9 +124,10 @@
     max-height: 0;
     font-size:17px;
     padding: 0 10px;
-    margin-top:10px;
+   
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
+    background-color: var(--bg-card);
 }
 .answer.open{
     max-height:300px;
