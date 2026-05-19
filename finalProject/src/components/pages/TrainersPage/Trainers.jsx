@@ -33,6 +33,15 @@ function Trainers() {
             <div className={styles.benefitsContainer}>
               <div className={styles.benefitsCard}>
                 <h3 className={styles.benefitsCardTitle}>
+                  Continuous Learning{" "}
+                </h3>
+                <p className={styles.benefitsCardText}>
+                  Our team attends seminars and certifications every year to
+                  stay sharp.
+                </p>
+              </div>
+              <div className={styles.benefitsCard}>
+                <h3 className={styles.benefitsCardTitle}>
                   Certified Professionals{" "}
                 </h3>
                 <p className={styles.benefitsCardText}>
@@ -49,17 +58,6 @@ function Trainers() {
                   powerlifting, mobility, rehab, conditioning.
                 </p>
               </div>
-
-              <div className={styles.benefitsCard}>
-                <h3 className={styles.benefitsCardTitle}>
-                  Continuous Learning{" "}
-                </h3>
-                <p className={styles.benefitsCardText}>
-                  Our team attends seminars and certifications every year to
-                  stay sharp.
-                </p>
-              </div>
-
               <div className={styles.benefitsCard}>
                 <h3 className={styles.benefitsCardTitle}>Personal Approach</h3>
                 <p className={styles.benefitsCardText}>
@@ -76,7 +74,7 @@ function Trainers() {
       <section className={styles.howToTrain}>
         <div className="container">
           <div className={styles.howToTrainInner}>
-            <h2 className={styles.howToTrainTitle} > Working With a Coach</h2>
+            <h2 className={styles.howToTrainTitle}> Working With a Coach</h2>
             <div className={styles.howToTrainContainer}>
               <div className={styles.howToTrainCard}>
                 <h3> Free Intro Call</h3>
@@ -105,7 +103,6 @@ function Trainers() {
           </div>
         </div>
       </section>
-      
     </main>
   );
 }
