@@ -7,15 +7,15 @@ function Gallery() {
 
   return (
     <main>
-      <section className={styles.preview}>
+      <section className={`${styles.previewGallery} preview`}>
         <div className="container">
-          <div className={styles.previewInner}>
+          <div className="previewInner">
             <h1>Our Gallery </h1>
-            <p className = {styles.description}>A look inside Titan Lab</p>
-            <div className={styles.dividerLine}>
-              <span className={styles.diamond}></span>
+            <p className = "description">A look inside Titan Lab</p>
+            <div className="dividerLine">
+              <span className="diamond"></span>
             </div>
-            <p className={styles.motivation}>Step inside Titan Lab. Every corner built for performance. Real people. Real effor. Real result </p>
+            <p className="motivation">Step inside Titan Lab. Every corner built for performance. Real people. Real effor. Real result </p>
           </div>
         </div>
       </section>

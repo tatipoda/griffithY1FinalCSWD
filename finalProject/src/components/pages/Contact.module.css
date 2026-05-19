@@ -1,25 +1,99 @@
-.formContainer{
+.previewContact{
+    background:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+    url("../../assets/gallerry/headerContact.png");
+    background-position: center 20% !important;
+
+}
+.content{
+    display: flex;
+    width: 100%;
+    gap:20px;
+    justify-content: center;
+}
+.form{
+    max-width: 700px;
+}
+.contact{
+    max-width: 450px;
+}
+.form, .contact{ 
+
     display:flex;
     flex-direction: column;
-    max-width:700px;
     width:100%;
+    margin:20px 0;
 }
+.formInner, .contactInner{
+    margin:0 auto;
+    height: 480px;
+    width:100%;
+    border:1px solid var(--border-strong);
+    border-radius: 10px;
+    padding:10px 20px;
+}
+.title{
+    margin-top:10px;
+     border-left:4px solid var(--yellow);
+    padding-left:12px;
+    font-size: 30px;
+}
+
+.groupInput{
+    display: flex;
+    gap:15px;
+
+}
+.groupInput .inputContainer{
+    margin:0;
+}
+
 .inputContainer{
+    position:relative;
     display:flex;
-    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin:15px 0;
 }
-.inputContainer label{
-    padding: 10px 0;
+.inputContainer.message{
+    align-items: start;
+}
+.inputContainer.message .inputIcon{
+    margin-top:10px;
+}
+.inputIcon{
+    position: absolute;
+    left: 14px;
+    color: var(--text-dim);
+    pointer-events: none;
 }
 .inputContainer input{
 height:50px;
 }
 .inputContainer input, .inputContainer textarea{
+width: 100%;
+padding-left: 60px;
+outline: none;
+}
+.inputContainer textarea{
+    padding-top:10px;
+}
+.inputContainer input, .inputContainer textarea{
+    border:1px solid var(--border-strong);
     border-radius: 10px;
 }
+
+:global(.react-international-phone-country-selector){
+    margin-right:15px !important;
+     border:1px solid var(--border-strong);
+    border-radius: 10px;
+    background-color: var(--bg-card) !important;
+    padding:2.5px;   
+}
 :global(.react-international-phone-input-container){
-    border: 1px solid var(--border) !important;
-    border-radius: 10px !important;
+    /* border: 1px solid var(--border-strong) !important;
+    border-radius: 10px !important; */
+    width: 100%;
 }
 :global(.react-international-phone-input){
     height:50px !important;
@@ -29,20 +103,25 @@ height:50px;
     color: var(--text) !important;
     padding: 8px 12px !important;
     border: 1px solid var(--border) !important;
+    border-radius: 10px !important;
 }
+/* :global(.react-international-phone-country-selector-button__button-content){
+    
+} */
 :global(.react-international-phone-country-selector-button){
-    height:50px !important;
+    height: 100%;
     background-color: var(--bg-card) !important;
     font-size: var(--fs-body-m) !important;
     color: var(--text) !important;
     padding: 8px 12px !important;
-    border: 1px solid var(--border) !important;
+    border: none;
 }
 :global(.react-international-phone-country-selector-dropdown){
     background-color: var(--bg-card) !important;
     color: var(--text) !important;
     border: 1px solid var(--border) !important;
     border-radius: 10px !important;
+    outline: none;
 }
 :global(.react-international-phone-country-selector-dropdown__list-item:hover){
     background-color: var(--bg-soft) !important;
@@ -51,8 +130,52 @@ height:50px;
 }
 .submitButton{
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
     font-weight: bold;
+    font-size: 20px;
      margin: 15px auto;
      padding: 15px 0;
      border-radius: 10px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+}
+.infoElement{
+    display: flex;
+    gap:15px;
+    padding-bottom:10px;
+
+    border-bottom: 1px solid var(--border-strong);
+    margin-bottom:5px;
+    
+}
+.lastElement{
+    border:none;
+    padding-bottom:0;
+}
+.infoIcon{
+    height: 100%;
+    color:var(--yellow);
+    margin:15px 10px;
+
+    display: flex;
+    align-items: center;
+}
+
+.infoText{
+    margin-top:10px;
+}
+.infoText h3{
+    color:var(--yellow);
+    font-size: 21px;
+    margin-bottom:10px;
+}
+.infoText p{
+    margin:5px 0;
+    color: var(--text-dim);
 }
