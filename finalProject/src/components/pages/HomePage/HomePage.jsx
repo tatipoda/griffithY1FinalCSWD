@@ -12,6 +12,9 @@ import jack from '../../../assets/trainers/JackOConnor.jpg';
 import patricia from '../../../assets/trainers/PatriciaLeanBeefPatty.jpg';
 import sarah from '../../../assets/trainers/SarahColins.jpg';
 import sergiy from '../../../assets/trainers/SergiyDukhota.jpg';
+import marcus from '../../../assets/trainers/trainer1.jpg';
+import devon from '../../../assets/trainers/trainer2.png';
+import mei from '../../../assets/trainers/trainer3.png';
 
 function HomePage() {
   const cards = [
@@ -21,10 +24,13 @@ function HomePage() {
     {id: 3, imageLink: crossfit, cardName:"Crossfit", cardDetail:"High intensity functional training"}
   ]
   const trainers = [
-    {id:0, imageLink: jack, trainerName: "Jack O'Connor", trainerDetail:"Bodybuilding/Crossfit"},
-    {id:1, imageLink: patricia, trainerName: "Sarah Colins", trainerDetail:"Pilatess/Bodybuilding"},
-    {id:2, imageLink: sarah, trainerName: "Sergiy Dukhota", trainerDetail:"Fitness/Crossfit"},
-    {id:3, imageLink: sergiy, trainerName: "Patricia LeanBeefPatty", trainerDetail:"Cardio/Fitness"}
+    {id:0, imageLink: jack,     trainerName: "Jack O'Connor",          trainerDetail: "Bodybuilding / CrossFit"},
+    {id:1, imageLink: sarah,    trainerName: "Sarah Colins",           trainerDetail: "Pilates / Strength"},
+    {id:2, imageLink: sergiy,   trainerName: "Sergiy Dukhota",         trainerDetail: "Rehab / Strength"},
+    {id:3, imageLink: patricia, trainerName: "Patricia LeanBeefPatty", trainerDetail: "Cardio / Group Fitness"},
+    {id:4, imageLink: marcus,   trainerName: "Marcus Reilly",          trainerDetail: "Powerlifting / Strength"},
+    {id:5, imageLink: devon,    trainerName: "Devon Carter",           trainerDetail: "Boxing / Conditioning"},
+    {id:6, imageLink: mei,      trainerName: "Mei Tanaka",             trainerDetail: "Mobility / HIIT"}
   ]
 
     

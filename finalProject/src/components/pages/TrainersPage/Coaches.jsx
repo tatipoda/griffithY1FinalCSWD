@@ -6,6 +6,9 @@ import JackOConnorPhoto from "../../../assets/trainers/JackOConnor.jpg";
 import SarahColinsPhoto from "../../../assets/trainers/SarahColins.jpg";
 import SergiyDukhotaPhoto from "../../../assets/trainers/SergiyDukhota.jpg";
 import PatriciaLeanBeefPattyPhoto from "../../../assets/trainers/PatriciaLeanBeefPatty.jpg";
+import MarcusReillyPhoto from "../../../assets/trainers/trainer1.jpg";
+import DevonCarterPhoto from "../../../assets/trainers/trainer2.png";
+import MeiTanakaPhoto from "../../../assets/trainers/trainer3.png";
 
 function Coaches() {
   const coaches = [
@@ -16,7 +19,7 @@ function Coaches() {
       photo: JackOConnorPhoto,
       quote: "Form first. Weight is just a number — control is what builds strength.",
       description:
-        "12 years of competitive experience. EQF Level 4 Personal Training. Specialises in hypertrophy programming and high-intensity training.",
+        "12 years of competitive bodybuilding and an EQF Level 4 Personal Training certification. Jack runs our most demanding CrossFit sessions and writes individual hypertrophy programs for advanced members. National-level powerlifter outside the gym.",
     },
     {
       id: 2,
@@ -25,7 +28,7 @@ function Coaches() {
       photo: SarahColinsPhoto,
       quote: "Pilates isn't 'easy yoga'. Done right, it'll humble anyone who lifts heavy.",
       description:
-        "8 years of coaching. Background in professional dance and rehabilitation. Specialises in pilates, mobility, and women's strength programming.",
+        "8 years of coaching, with a background in professional dance and rehabilitation. Specialises in pilates, mobility, and structured strength work for women, beginners, and members returning from injury. Patient, technical, impossible to fool with bad form.",
     },
     {
       id: 3,
@@ -34,7 +37,7 @@ function Coaches() {
       photo: SergiyDukhotaPhoto,
       quote: "I don't care what you lift on day one. I care that on day 300 you're still here, progressing.",
       description:
-        "10 years of experience. Licensed physiotherapist turned strength coach. Bridges rehab and real training for returners and beginners.",
+        "Licensed physiotherapist turned strength coach with 10 years of experience. Sergiy bridges the gap between rehab and real training, working one-on-one with members recovering from back, knee, and shoulder injuries.",
     },
     {
       id: 4,
@@ -43,7 +46,34 @@ function Coaches() {
       photo: PatriciaLeanBeefPattyPhoto,
       quote: "Energy is contagious. Train loud, train hard, leave smiling.",
       description:
-        "6 years coaching group fitness. Marathon finisher and Titan Lab's most energetic coach. Runs Cycle Cardio and HIIT classes.",
+        "6 years coaching group fitness. Marathon finisher and Titan Lab's most energetic coach. Patricia runs our Cycle Cardio and HIIT classes — high volume, loud music, zero patience for sitting on a bench between sets.",
+    },
+    {
+      id: 5,
+      name: "Marcus Reilly",
+      role: "Powerlifting & Strength Specialist",
+      photo: MarcusReillyPhoto,
+      quote: "Strong is not a look. It's a habit you build over years.",
+      description:
+        "Former competitive powerlifter with a 720kg total. Marcus coaches our Strength Foundations and Olympic Lifting classes. Known for obsessive attention to bar path, bracing technique, and programming that actually progresses week over week.",
+    },
+    {
+      id: 6,
+      name: "Devon Carter",
+      role: "Boxing & Athletic Conditioning",
+      photo: DevonCarterPhoto,
+      quote: "Footwork before fists. Conditioning before chaos.",
+      description:
+        "Ex-amateur boxer and certified S&C coach. Devon leads our Boxing and high-intensity conditioning sessions. His sessions blend pad work, footwork drills, and explosive conditioning — built for athletes and beginners who want to move like one.",
+    },
+    {
+      id: 7,
+      name: "Mei Tanaka",
+      role: "Mobility & HIIT Coach",
+      photo: MeiTanakaPhoto,
+      quote: "You can't train hard if you can't move well. Mobility comes first.",
+      description:
+        "Former competitive gymnast, now 5 years coaching. Mei runs our Mobility sessions and morning HIIT classes. Specialises in joint health, prehab routines, and helping desk-bound members move like humans again.",
     },
   ];
 
@@ -73,7 +103,7 @@ function Coaches() {
          
         >
           {coaches.map((coach) => (
-            <SplideSlide>
+            <SplideSlide key={coach.id}>
               <div className={styles.slide}>
                 <div className={styles.photoWrap}>
                   <img src={coach.photo} alt={coach.name} className={styles.photo} />

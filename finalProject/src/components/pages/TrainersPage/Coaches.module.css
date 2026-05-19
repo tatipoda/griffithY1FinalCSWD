@@ -30,6 +30,7 @@
   padding: 20px;
   width: 100%;
   max-width: 100%;
+  min-height: 620px;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -37,8 +38,10 @@
 .photoWrap {
   width: 100%;
   max-width: 280px;
+  aspect-ratio: 4 / 5;
   border-radius: 10px;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .photo {
@@ -171,10 +174,12 @@
     align-items: center;
     gap: 28px;
     padding: 28px;
+    min-height: 360px;
   }
 
   .photoWrap {
     max-width: 260px;
+    aspect-ratio: 1 / 1;
   }
 
   .info {
@@ -216,6 +221,7 @@
   .slide {
     gap: 40px;
     padding: 36px;
+    min-height: 440px;
   }
 
   .photoWrap {
