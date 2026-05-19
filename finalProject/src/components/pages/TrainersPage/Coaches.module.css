@@ -1,0 +1,238 @@
+
+
+/* ___________section + title___________ */
+.section {
+  padding: 40px 0 60px;
+}
+
+.sliderWrap {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.title {
+  width: fit-content;
+  margin: 0 0 24px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid var(--yellow-deep);
+
+}
+
+/* ___________slide layout___________ */
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  background: var(--bg-card);
+  border-radius: 14px;
+  padding: 20px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.photoWrap {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;  
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.name {
+  margin-bottom: 5px;
+  color: var(--always-white-text);
+}
+
+.role {
+  width: fit-content;
+  color: var(--text-yellow-deep);
+  font-weight: 600;
+  margin: 0 auto 18px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--yellow-deep);
+}
+
+.quoteBox {
+  position: relative;
+  padding: 18px 22px;
+  margin-bottom: 16px;
+  text-align: left;
+  border: none;
+  background: var(--bg-soft);
+  border-radius: 6px;
+}
+
+.quoteBox::before,
+.quoteBox::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-style: solid;
+  border-color: var(--yellow-deep);
+}
+
+.quoteBox::before {
+  top: 0;
+  left: 0;
+  border-width: 2px 0 0 2px;
+}
+
+.quoteBox::after {
+  bottom: 0;
+  right: 0;
+  border-width: 0 2px 2px 0;
+}
+
+.quote {
+  color: var(--text-yellow-deep);
+  font-style: italic;
+}
+
+.description {
+  color: var(--text-dim);
+  text-align: left;
+}
+
+/* ___________arrows___________ */
+.arrow {
+  background: transparent ;
+  border: 2px solid var(--border-strong) ;
+  width: 40px ;
+  height: 40px ;
+  display: none ;
+}
+
+.arrow:hover {
+  border-color: var(--yellow-deep) ;
+}
+
+.arrow svg {
+  fill: var(--border-strong);
+  width: 16px;
+  height: 16px;
+}
+
+/* ___________pagination dots___________ */
+.pagination {
+  margin-top: 20px;
+  gap: 8px;
+}
+
+.paginationPage {
+  background: rgba(255, 255, 255, 0.25) ;
+  width: 9px ;
+  height: 9px ;
+  margin: 0 ;
+}
+
+.paginationPage:global(.is-active) {
+  background: var(--yellow-deep) ;
+}
+
+
+@media (min-width: 600px) {
+  .section {
+    padding: 50px 0 70px;
+  }
+
+  .slide {
+    padding: 28px;
+    gap: 24px;
+  }
+
+  .photoWrap {
+    max-width: 320px;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .slide {
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+    gap: 28px;
+    padding: 28px;
+  }
+
+  .photoWrap {
+    max-width: 260px;
+  }
+
+  .info {
+    align-items: flex-start;
+    min-width: 0;        
+    max-width: 560px;    
+  }
+
+  .quote,
+  .description {
+    max-width: 520px;  
+  }
+
+  .role {
+    margin: 0 0 22px;   
+  }
+
+  
+  .arrow {
+    display: flex ;
+    width: 44px ;
+    height: 44px ;
+  }
+
+  .arrowPrev {
+    left: 8px ;
+  }
+
+  .arrowNext {
+    right: 8px ;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section {
+    padding: 60px 0 80px;
+  }
+
+  .slide {
+    gap: 40px;
+    padding: 36px;
+  }
+
+  .photoWrap {
+    max-width: 360px;
+  }
+
+  .arrow {
+    width: 48px ;
+    height: 48px ;
+  }
+
+  .arrowPrev {
+    left: -70px ;
+  }
+
+  .arrowNext {
+    right: -70px ;
+  }
+}
+

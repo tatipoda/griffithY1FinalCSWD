@@ -81,28 +81,6 @@
   color: var(--text-dim);
 }
 
-/* _____________coaches____________ */
-
-.coachesCard {
-  background-color: var(--bg-card);
-  overflow: hidden;
-  border-radius: 5px;
-  max-width: 500px;
-  margin: 0 auto;
-   display: flex;
-  flex-direction: column;
-}
-.coachesCard img {
-  width: 100%;
-}
-
-.coachesCardText {
-  padding: 10px 20px;
-}
-
-.coachesCardText h4 {
-  color: var(--text-yellow-deep);
-}
 
 /* __________howToTrain ___________*/
 .howToTrainTitle {
@@ -171,13 +149,7 @@
 }
 
 @media (min-width: 768px) {
-  .coachesContainer {
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-  }
-  .coachesCard {
-    width: 100%;
-  }
+ 
 
   .howToTrainContainer {
     flex-direction: row;

@@ -1,66 +1,101 @@
-import styles from "./Trainers.module.css";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
+import styles from "./Coaches.module.css";
 
 import JackOConnorPhoto from "../../../assets/trainers/JackOConnor.jpg";
-import PatriciaLeanBeefPattyPhoto from "../../../assets/trainers/PatriciaLeanBeefPatty.jpg";
 import SarahColinsPhoto from "../../../assets/trainers/SarahColins.jpg";
 import SergiyDukhotaPhoto from "../../../assets/trainers/SergiyDukhota.jpg";
+import PatriciaLeanBeefPattyPhoto from "../../../assets/trainers/PatriciaLeanBeefPatty.jpg";
 
 function Coaches() {
+  const coaches = [
+    {
+      id: 1,
+      name: "Jack O'Connor",
+      role: "Head Coach — Bodybuilding & CrossFit",
+      photo: JackOConnorPhoto,
+      quote: "Form first. Weight is just a number — control is what builds strength.",
+      description:
+        "12 years of competitive experience. EQF Level 4 Personal Training. Specialises in hypertrophy programming and high-intensity training.",
+    },
+    {
+      id: 2,
+      name: "Sarah Colins",
+      role: "Pilates & Strength Coach",
+      photo: SarahColinsPhoto,
+      quote: "Pilates isn't 'easy yoga'. Done right, it'll humble anyone who lifts heavy.",
+      description:
+        "8 years of coaching. Background in professional dance and rehabilitation. Specialises in pilates, mobility, and women's strength programming.",
+    },
+    {
+      id: 3,
+      name: "Sergiy Dukhota",
+      role: "Rehabilitation & Strength Foundations",
+      photo: SergiyDukhotaPhoto,
+      quote: "I don't care what you lift on day one. I care that on day 300 you're still here, progressing.",
+      description:
+        "10 years of experience. Licensed physiotherapist turned strength coach. Bridges rehab and real training for returners and beginners.",
+    },
+    {
+      id: 4,
+      name: "Patricia LeanBeefPatty",
+      role: "Cardio & Group Fitness",
+      photo: PatriciaLeanBeefPattyPhoto,
+      quote: "Energy is contagious. Train loud, train hard, leave smiling.",
+      description:
+        "6 years coaching group fitness. Marathon finisher and Titan Lab's most energetic coach. Runs Cycle Cardio and HIIT classes.",
+    },
+  ];
+
   return (
-    <main>
-      <section className={styles.coaches}>
-        <div className="container">
-          <div className={styles.coachesInner}>
-            <h2 className={styles.coachesTitle}>Our Coaches</h2>
-            <div className={styles.coachesContainer}>
-              <div className={styles.coachesCard}>
-                <img src={JackOConnorPhoto} alt="Jack O'Connor Photo" />
-                <div className={styles.coachesCardText}>
-                     <h3>Jack O'Connor</h3>
-                <h4>Head Coach — Bodybuilding & CrossFit</h4>
-                <p>Jack has 12 years of competitive bodybuilding behind him and an EQF Level 4 Personal Training certification. He runs our most intense CrossFit sessions and writes individual hypertrophy programs for advanced members. Outside the gym he's a national-level powerlifter.</p>
-                <strong>12 years</strong>
-                </div>
-             
-              </div>
+    <section className={styles.section}>
+      <div className="container">
+        <h2 className={styles.title}>In Their Words</h2>
 
-               <div className={styles.coachesCard}>
-                <img src={SarahColinsPhoto} alt="Sarah Colins Photo" />
-                <div className={styles.coachesCardText}>
-                   <h3>Sarah Colins</h3>
-                <h4>Pilates & Strength Coach</h4>
-                <p>Sarah came to coaching from a background in professional dance and rehabilitation. She specialises in pilates, mobility, and structured strength work for women, beginners, and people returning to training after injury. Patient, technical, and impossible to fool with bad form.</p>
-                <strong>8 years</strong>
+        <div className={styles.sliderWrap}>
+        <Splide
+          options={{
+            type: "loop",
+            perPage: 1,
+            gap: "50px",
+            pagination: true,
+            arrows: true,
+            speed: 1000,
+            classes: {
+              arrows: `splide__arrows ${styles.arrows}`,
+              arrow: `splide__arrow ${styles.arrow}`,
+              prev: `splide__arrow--prev ${styles.arrowPrev}`,
+              next: `splide__arrow--next ${styles.arrowNext}`,
+              pagination: `splide__pagination ${styles.pagination}`,
+              page: `splide__pagination__page ${styles.paginationPage}`,
+            },
+          }}
+         
+        >
+          {coaches.map((coach) => (
+            <SplideSlide>
+              <div className={styles.slide}>
+                <div className={styles.photoWrap}>
+                  <img src={coach.photo} alt={coach.name} className={styles.photo} />
                 </div>
-               
-              </div>
 
-               <div className={styles.coachesCard}>
-                <img src={SergiyDukhotaPhoto} alt="Sergiy Dukhota Photo" />
-                <div className={styles.coachesCardText}>
-                  <h3>Sergiy Dukhota</h3>
-                <h4>Rehabilitation & Strength Foundations</h4>
-                <p>A licensed physiotherapist turned strength coach, Sergiy bridges the gap between rehab and real training. If you've ever been told "stop lifting because of your back/knee/shoulder" — talk to Sergiy first. He coaches our Strength Foundations classes and works one-on-one with members recovering from injuries.</p>
-                <strong>10 years</strong>
-                </div>
-                
-              </div>
+                <div className={styles.info}>
+                  <h3 className={styles.name}>{coach.name}</h3>
+                  <p className={styles.role}>{coach.role}</p>
 
-               <div className={styles.coachesCard}>
-                <img src={PatriciaLeanBeefPattyPhoto} alt="Patricia LeanBeefPatty Photo" />
-                <div className={styles.coachesCardText}>
-                  <h3>Patricia LeanBeefPatty</h3>
-                <h4>Cardio & Group Fitness</h4>
-                <p>Fitness influencer, marathon finisher, and Titan Lab's most energetic coach. Patricia runs our Cycle Cardio and HIIT classes — high volume, loud music, and zero patience for sitting on a bench between sets. Perfect if you train better in a group.</p>
-                <strong>6 years</strong>
+                  <blockquote className={styles.quoteBox}>
+                    <p className={styles.quote}>{coach.quote}</p>
+                  </blockquote>
+
+                  <p className={styles.description}>{coach.description}</p>
                 </div>
-                
               </div>
-            </div>
-          </div>
+            </SplideSlide>
+          ))}
+        </Splide>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
   );
 }
 
