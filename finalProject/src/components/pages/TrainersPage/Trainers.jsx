@@ -68,8 +68,12 @@ function Trainers() {
           </div>
         </div>
       </section>
-
-      <Coaches />
+        <section className={styles.sectionSlider}>
+            <div className="container">
+              <h2 className={styles.title}>In Their Words</h2>
+              <Coaches />
+            </div>
+        </section>
 
       <section className={styles.howToTrain}>
         <div className="container">

@@ -11,8 +11,13 @@
 }
 
 .heroContent {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
   max-width: 600px;
+
   color: var(--bg);
+  
 }
 
 .heroContent h1 {
@@ -23,110 +28,161 @@
 .heroContent p {
   font-size: 30px;
   margin-bottom: 30px;
+ 
 }
 
-.heroContent button,
 .card button,
 .cta button {
   padding: 12px 24px;
-  /* background-color: #111111;
-  color: white; */
   border: none;
   cursor: pointer;
   font-weight: var(--fw-bold);
 }
-
-.heroContent button:hover,
-.card button:hover,
-.cta button:hover {
-  /* background-color: #e63946; */
+.buttonsContainer{
+  display: flex;
+  border: 1px solid;
+  gap:30px;
+}
+.getStartedButton, .exploreButton{
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+    font-weight: bold;
+    font-size: 20px;
+     margin: 15px 0;
+     padding: 15px 0;
+     border-radius: 10px;
+     cursor: pointer;
+}
+.exploreButton{
+  color:var(--text);
+  background-color: transparent;
+  border-color: var(--border-strong);
+}
+.benefitsContainer{
+  display: flex;
+  justify-content: space-evenly;
+  width:95%;
+  border:1px solid var(--border-strong);
+  border-radius: 10px;
+  padding:30px 20px;
+  margin:0 auto;
 }
 
-/* .cardImage,
-.trainerImage {
+.benefit{
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #eeeeee;
-  border: 1px solid #bbbbbb;
-  color: #777777;
-  font-weight: 700;
-} */
+  gap:15px;
+   align-items: center;
+   padding-right:20px;
+}
+.text{
+  display: flex;
+  flex-direction: column;
+
+  gap:5px;
+}
+.benefit .title{
+  font-size: 20px;
+  margin:0;
+}
+.benefit .description{
+  margin:0;
+  color:var(--text-muted)
+}
+.benefitIcon{
+  color:var(--yellow);
+}
+
 
 .section {
   padding: 60px 6%;
   border-bottom: 1px solid var(--border);
 }
+.groupName{
+  font-size: 20px;
+  color:var(--yellow);
+ margin:0;
+}
+.titleContainer, .titleContainerCoaches {
+  display: flex;
+  border-bottom:1px solid var(--border-strong);
+  padding-bottom: 10px;
+  margin-bottom:30px;
+  align-items: center; 
+  justify-content: space-between;
+}
+.titleContainerCoaches{
+  margin-top:7px;
 
-.section h2 {
-  text-align: center;
-  font-size: var(--fs-h1);
-  margin-bottom: 36px;
+ }
+.section .title{
+  font-size: 30px;
+  margin:0;
+}
+.allClassesButton{
+     width: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+    font-weight: bold;
+    font-size: 20px;
+     padding: 15px 0;
+     border-radius: 10px;
+     cursor: pointer;
+    color:var(--text);
+    background-color: transparent;
+    border-color: var(--border-strong);
+}
+.allClassesIcon{
+  color:var(--yellow);
 }
 
-.sectionIntro {
-  max-width: 650px;
-  margin: -18px auto 36px;
-  text-align: center;
-  color: var(--text-muted);
-  font-size: 18px;
-  line-height: 1.6;
-}
 
 .cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 28px;
+  gap: 15px;
 }
-
 .card {
   border: 1px solid var(--border-strong);
+  border-radius: 10px;
   background-color: var(--bg-card);
   transition: transform 0.2s;
+  overflow: hidden;
+
 }
 .card:hover {
   transform: translateY(-6px);
 }
 
-.cardImage {
-  height: 150px;
+.cardInfo{
+  display: flex;
+  padding:20px 15px;
+  align-items: center;
+  justify-content: space-between;
+}
+.cardInfo .text{
+  width:230px;
 }
 
-.card h3,
-.card p,
-.cardButton {
-  margin-left: 18px;
-  margin-right: 18px;
+.card .cardImage {
+  height: 250px;
+
+  
 }
 
-.card h3 {
-  margin-top: 18px;
+.card .title{
+  font-size: 22px;
+  margin:0;
+}
+.card .description{
+  margin:0;
+  color:var(--text-muted);
 }
 
-.card p {
-  color: var(--text-muted);
-}
-
-.card button {
-  margin-bottom: 18px;
-}
-
-<<<<<<< HEAD
-=======
-.cardButton {
-  display: inline-block;
-  margin-bottom: 18px;
-  padding: 12px 24px;
-  background: var(--yellow);
-  color: var(--black);
-  text-decoration: none;
-  font-weight: var(--fw-bold);
-}
-
-.cardButton:hover {
-  background: var(--yellow-deep);
-  color: var(--black);
-}
 
 .sectionAction {
   margin-top: 36px;
@@ -148,44 +204,7 @@
   color: var(--black);
 }
 
->>>>>>> 8d4150a99c95f3756da3d6f9c294217fd7a372a3
-.slideContainer{
-  position: relative;
-  overflow: hidden;
-  height: 500px;
-}
-.slideImage{
-  width: 100%; 
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-.slideInfo{
-  position: absolute;
-  inset:0;
-  background: rgba(0, 0, 0, 0.6);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap:12px;
-  opacity: 0;
-  transition:opacity 0.3s ease;
-}
-.slideContainer:hover .slideInfo{
-  opacity: 1;
-}
-.slideContainer:hover .slideImage{
-  transform: scale(1.05);
-}
-.slideInfo h3{
-  color:white;
-  font-size: 25px;
-}
-.slideInfo p{
-  color:white;
-  font-size: 18px;
-}
+
 .viewButton{
   border-radius: 10px;
   font-size: 18px;
@@ -201,23 +220,7 @@
 
 }
 
-/* .trainers {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 38px;
-}
 
-.trainer {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.trainerImage {
-  width: 110px;
-  height: 110px;
-  flex-shrink: 0;
-} */
 
 .cta {
   padding: 50px 6%;

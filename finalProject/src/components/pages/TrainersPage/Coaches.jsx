@@ -78,10 +78,6 @@ function Coaches() {
   ];
 
   return (
-    <section className={styles.section}>
-      <div className="container">
-        <h2 className={styles.title}>In Their Words</h2>
-
         <div className={styles.sliderWrap}>
         <Splide
           options={{
@@ -124,8 +120,7 @@ function Coaches() {
           ))}
         </Splide>
         </div>
-      </div>
-    </section>
+
   );
 }
 

@@ -1,3 +1,16 @@
+/* ___________section + title___________ */
+.sectionSlider {
+  padding: 40px 0 60px;
+}
+
+.title {
+  width: fit-content;
+  margin: 0 0 24px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid var(--yellow-deep);
+
+}
+
 /*  _____________trainerTeam__________ */
 
 .trainersTeam {
