@@ -23,6 +23,7 @@
     /* accents — yellow */
     --yellow:       #FFD60A;
     --yellow-deep:  #e69900;
+    --yellow-deep-rgb: 230, 153, 0;     /* same as --yellow-deep, for use in rgba() */
     --yellow-soft:  #FFE85C;
     /* accents — red */
     --red:          #E63946;

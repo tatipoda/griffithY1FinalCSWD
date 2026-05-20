@@ -41,12 +41,17 @@
   max-width: 600px;
 }
 
-.trainersTeamTitle,
+.trainersTeamTitle {
+  color: var(--always-white-text);
+  font-size: var(--fs-display);
+}
 .trainersTeamText {
   color: var(--always-white-text);
+  font-size: var(--fs-body-m);
 }
 .trainersTeamSubtitle {
   color: var(--text-yellow-deep);
+  font-size: var(--fs-body-l);
 }
 
 /* inners */
@@ -75,6 +80,7 @@
 .coachesTitle,
 .howToTrainTitle {
   text-align: center;
+  font-size: var(--fs-h2);
 }
 
 /* ___________benefits_______________ */
@@ -103,6 +109,7 @@
 
 .benefitsCardText {
   color: var(--text-dim);
+  font-size: var(--fs-body-m);
 }
 
 
@@ -133,6 +140,7 @@
   flex-direction: column;
   justify-content: center;
   cursor: default;
+  font-size: var(--fs-body-m);
   transition: transform 0.25s ease, border-color 0.25s ease,
               box-shadow 0.25s ease, background-color 0.25s ease;
 }

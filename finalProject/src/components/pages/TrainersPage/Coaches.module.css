@@ -1,10 +1,19 @@
-
-.sliderWrap {
+/* ___________section___________ */
+.coachesInner {
   max-width: 1100px;
   margin: 0 auto;
 }
+
+.coachesTitle {
+  width: fit-content;
+  margin: 0 0 24px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid var(--yellow-deep);
+  font-size: var(--fs-h2);
+}
+
 /* ___________slide layout___________ */
-.slide {
+.coachesSlide {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,12 +24,12 @@
   padding: 20px;
   width: 100%;
   max-width: 100%;
-  min-height: 620px;
+  min-height: 720px;
   box-sizing: border-box;
   overflow: hidden;
 }
 
-.photoWrap {
+.coachesPhotoWrap {
   width: 100%;
   max-width: 280px;
   aspect-ratio: 4 / 5;
@@ -29,34 +38,48 @@
   flex-shrink: 0;
 }
 
-.photo {
+.coachesPhoto {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;  
+  object-position: center top;
 }
 
-.info {
+/* info column */
+.coachesInfo {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 }
 
-.name {
-  margin-bottom: 5px;
+.coachesKicker {
+  display: inline-block;
+  color: var(--yellow-deep);
+  font-size: var(--fs-body-s);
+  font-weight: var(--fw-bold);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
 }
 
-.role {
+.coachesName {
+  font-size: var(--fs-h1);
+  margin-bottom: 4px;
+}
+
+.coachesRole {
   width: fit-content;
   color: var(--text-yellow-deep);
-  font-weight: 600;
+  font-size: var(--fs-body-m);
+  font-weight: var(--fw-semibold);
   margin: 0 auto 18px;
   padding-bottom: 6px;
   border-bottom: 2px solid var(--yellow-deep);
 }
 
-.quoteBox {
+/* quote */
+.coachesQuoteBox {
   position: relative;
   padding: 18px 22px;
   margin-bottom: 16px;
@@ -64,10 +87,12 @@
   border: none;
   background: var(--bg-soft);
   border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.quoteBox::before,
-.quoteBox::after {
+.coachesQuoteBox::before,
+.coachesQuoteBox::after {
   content: "";
   position: absolute;
   width: 18px;
@@ -76,153 +101,270 @@
   border-color: var(--yellow-deep);
 }
 
-.quoteBox::before {
+.coachesQuoteBox::before {
   top: 0;
   left: 0;
   border-width: 2px 0 0 2px;
 }
 
-.quoteBox::after {
+.coachesQuoteBox::after {
   bottom: 0;
   right: 0;
   border-width: 0 2px 2px 0;
 }
 
-.quote {
+.coachesQuoteText {
   color: var(--text-yellow-deep);
   font-style: italic;
+  font-size: var(--fs-body-m);
+  margin: 0;
 }
 
-.description {
+.coachesDescription {
   color: var(--text-dim);
+  font-size: var(--fs-body-m);
   text-align: left;
+  margin-bottom: 20px;
+}
+
+/* ________________stats_____________ */
+.coachesStats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-strong);
+  margin-top: auto;
+}
+
+.coachesStatsRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.coachesStat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.coachesStatValue {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+  color: var(--yellow-deep);
+  line-height: 1;
+}
+
+.coachesStatLabel {
+  font-size: var(--fs-body-s);
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.coachesStatDivider {
+  width: 1px;
+  height: 40px;
+  background: var(--border-strong);
+  flex-shrink: 0;
+}
+
+/* ____________rating___________ */
+.coachesRatingRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1;
+}
+
+.coachesStars {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  color: var(--yellow);
+  font-size: var(--fs-body-m);
+}
+
+.coachesRatingValue {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+  color: var(--yellow-deep);
+  line-height: 1;
+}
+
+/* __________specialty_________ */
+.coachesSpecialties {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+}
+
+.coachesSpecialty {
+  font-size: var(--fs-body-s);
+  font-weight: var(--fw-medium);
+  color: var(--text);
+  background: rgba(var(--yellow-deep-rgb), 0.12);
+  border: 1px solid rgba(var(--yellow-deep-rgb), 0.4);
+  border-radius: 999px;
+  padding: 4px 12px;
 }
 
 /* ___________arrows___________ */
-.arrow {
-  background: transparent ;
-  border: 2px solid var(--border-strong) ;
-  width: 40px ;
-  height: 40px ;
-  display: none ;
+.coachesArrow {
+  background: transparent;
+  border: 2px solid var(--text);
+  width: 40px;
+  height: 40px;
+  display: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
-.arrow:hover {
-  border-color: var(--yellow-deep) ;
+.coachesArrow:hover {
+  background-color: var(--yellow);
+  border-color: var(--yellow);
 }
 
-.arrow svg {
-  fill: var(--border-strong);
+.coachesArrow svg {
+  fill: var(--text);
   width: 16px;
   height: 16px;
+  transition: fill 0.2s ease;
+}
+
+.coachesArrow:hover svg {
+  fill: var(--black);
 }
 
 /* ___________pagination dots___________ */
-.pagination {
+.coachesPagination {
   margin-top: 20px;
   gap: 8px;
 }
 
-.paginationPage {
-  background: rgba(255, 255, 255, 0.25) ;
-  width: 9px ;
-  height: 9px ;
-  margin: 0 ;
+.coachesPaginationPage {
+  background: var(--text-dim);
+  width: 9px;
+  height: 9px;
+  margin: 0;
+  opacity: 0.5;
 }
 
-.paginationPage:global(.is-active) {
-  background: var(--yellow-deep) ;
+.coachesPaginationPage:global(.is-active) {
+  background: var(--yellow);
+  opacity: 1;
 }
 
+/* ____________Adaptation___________ */
 
 @media (min-width: 600px) {
-  .section {
-    padding: 50px 0 70px;
-  }
-
-  .slide {
+  .coachesSlide {
     padding: 28px;
     gap: 24px;
+    min-height: 760px;
   }
 
-  .photoWrap {
+  .coachesPhotoWrap {
     max-width: 320px;
   }
 
+  .coachesName {
+    font-size: var(--fs-display);
+  }
 }
 
 @media (min-width: 1024px) {
-  .slide {
+  .coachesSlide {
     flex-direction: row;
     text-align: left;
-    align-items: center;
+    align-items: stretch;
     gap: 28px;
     padding: 28px;
-    min-height: 360px;
+    min-height: 440px;
   }
 
-  .photoWrap {
+  .coachesPhotoWrap {
     max-width: 260px;
     aspect-ratio: 1 / 1;
+    align-self: center;
   }
 
-  .info {
+  .coachesInfo {
     align-items: flex-start;
-    min-width: 0;        
-    max-width: 560px;    
+    min-width: 0;
+    max-width: 560px;
   }
 
-  .quote,
-  .description {
-    max-width: 520px;  
+  .coachesQuoteBox,
+  .coachesQuoteText,
+  .coachesDescription {
+    max-width: 520px;
   }
 
-  .role {
-    margin: 0 0 22px;   
+  .coachesRole {
+    margin: 0 0 18px;
   }
 
-  
-  .arrow {
-    display: flex ;
-    width: 44px ;
-    height: 44px ;
+  .coachesStats {
+    align-items: flex-start;
+    gap: 14px;
   }
 
-  .arrowPrev {
-    left: 8px ;
+  .coachesStatsRow {
+    justify-content: flex-start;
+    gap: 24px;
   }
 
-  .arrowNext {
-    right: 8px ;
+  .coachesStat {
+    align-items: flex-start;
+  }
+
+  .coachesSpecialties {
+    justify-content: flex-start;
+  }
+
+  .coachesArrow {
+    display: flex;
+    width: 44px;
+    height: 44px;
+  }
+
+  .coachesArrowPrev {
+    left: 8px;
+  }
+
+  .coachesArrowNext {
+    right: 8px;
   }
 }
 
 @media (min-width: 1200px) {
-  .section {
-    padding: 60px 0 80px;
-  }
-
-  .slide {
+  .coachesSlide {
     gap: 40px;
     padding: 36px;
-    min-height: 440px;
+    min-height: 480px;
   }
 
-  .photoWrap {
-    max-width: 360px;
+  .coachesPhotoWrap {
+    max-width: 340px;
   }
 
-  .arrow {
-    width: 48px ;
-    height: 48px ;
+  .coachesArrow {
+    width: 48px;
+    height: 48px;
   }
 
-  .arrowPrev {
-    left: -70px ;
+  .coachesArrowPrev {
+    left: -70px;
   }
 
-  .arrowNext {
-    right: -70px ;
+  .coachesArrowNext {
+    right: -70px;
   }
 }
-

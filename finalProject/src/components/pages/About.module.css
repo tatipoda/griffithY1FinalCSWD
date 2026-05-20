@@ -22,12 +22,17 @@ section {
 .previewInner {
   max-width: 600px;
 }
-.previewTitle,
+.previewTitle {
+  color: var(--always-white-text);
+  font-size: var(--fs-display);
+}
 .previewParagraph {
   color: var(--always-white-text);
+  font-size: var(--fs-body-m);
 }
 .previewSubtitle {
   color: var(--text-yellow-deep);
+  font-size: var(--fs-body-l);
 }
 
 /* __________ourHistory_________ */
@@ -65,6 +70,7 @@ section {
   background-color: var(--bg-card);
   border-radius: 5px;
   padding: 10px 20px;
+  font-size: var(--fs-body-m);
 }
 
 .valueIcon {
@@ -82,9 +88,13 @@ section {
 .insideGymInfo{
 max-width: 500px;
 }
-.insideGymTitle,
-.insideGymText{
+.insideGymTitle {
     text-align: center;
+    font-size: var(--fs-h2);
+}
+.insideGymText {
+    text-align: center;
+    font-size: var(--fs-body-m);
 }
 
 
