@@ -150,7 +150,7 @@ return(
         {faqSections
         .find(section => section.section === activeSection)
         .faqs.slice(0, Math.floor(faqSections.find(section => section.section === activeSection).faqs.length/2)).map((faq) => (
-            <div className={styles.questionAnswerContainer} key={faq.key}>
+            <div className={`${styles.questionAnswerContainer} ${faqOpen === faq.id ? styles.active : ''}`} key={faq.key}>
                 <button 
                 className ={`${styles.question} ${faqOpen === faq.id ? styles.questionOpen : ''}`} 
                 onClick={() => setFaqOpen(faqOpen ===faq.id ? null: faq.id)}>

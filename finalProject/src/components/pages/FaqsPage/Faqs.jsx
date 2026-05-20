@@ -9,20 +9,21 @@ import styles from './Faqs.module.css';
 function Faqs() {
 const[activeSection, setActiveSection] = useState('Classes & Training');
 
-
-
-
   return (
     <main>
-        <section className={styles.preview}>
-            <div className="container">
-                <div className={styles.previewInner}>
-                    <h1>Frequently asked questions</h1>
-                    <p>Can't find what you're looking for? Browse our most frequently asked questions below. 
-                    If you still need help, don't hesitate to reach out through <Link to='/contact'>contact</Link></p>
+         <section className={`${styles.previewFaqs} preview`}>
+                <div className="container">
+                  <div className="previewInner">
+                    <h1>FAQS </h1>
+                    <p className = "description">Can't find what you're looking for?</p>
+                    <div className="dividerLine">
+                      <span className="diamond"></span>
+                    </div>
+                    <p className="motivation"> Browse our most frequently asked questions below. 
+                    If you still need help reach out through <Link to='/contact'>contact</Link></p>
+                  </div>
                 </div>
-            </div>
-        </section>
+              </section>
 
         <section className={styles.faqs}>
             <div className="container">

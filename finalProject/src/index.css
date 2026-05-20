@@ -287,7 +287,7 @@ td {
 .preview h1{
     color:white;
   font-size: 90px;
-  margin-bottom: 0;
+  margin-bottom: 3px;
 }
 .description {
   font-size: 28px;
