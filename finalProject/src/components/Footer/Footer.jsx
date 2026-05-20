@@ -10,6 +10,13 @@ import tikTokWhite from '../../assets/icons/tikTokWhite.png';
 function Footer({theme}) {
   return (
     <footer className={styles.footer}>
+      <div className={styles.dividerContainer}>
+        <div className={styles.line}></div>
+        <div className={styles.logoWrap}>
+          <img src="/titanLogo.png" alt="Titan Lab Logo" />
+        </div>
+      </div>
+      
         <div className={styles.footerDetail}>
       <div className={styles.gymName}>
         <h2>Titan Lab</h2>
